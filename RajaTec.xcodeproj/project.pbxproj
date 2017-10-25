@@ -39,6 +39,13 @@
 		49659B331FA0F0CC00543D1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49659B311FA0F0CC00543D1C /* Main.storyboard */; };
 		49659B351FA0F0CC00543D1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49659B341FA0F0CC00543D1C /* Assets.xcassets */; };
 		49659B381FA0F0CC00543D1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49659B361FA0F0CC00543D1C /* LaunchScreen.storyboard */; };
+		49A2DFD41FA107B000DC2C2A /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFD31FA1079F00DC2C2A /* APIEndPoints.swift */; };
+		49A2DFD51FA107B000DC2C2A /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFD11FA1079F00DC2C2A /* Connection.swift */; };
+		49A2DFD61FA107B000DC2C2A /* ConnectionDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFD21FA1079F00DC2C2A /* ConnectionDelegates.swift */; };
+		49A2DFD71FA107F600DC2C2A /* SWRevealViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFCF1FA1067F00DC2C2A /* SWRevealViewController.h */; };
+		49A2DFD81FA107F600DC2C2A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFD01FA1067F00DC2C2A /* SWRevealViewController.m */; };
+		49A2DFD91FA107F600DC2C2A /* RajaTec-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFCE1FA1067E00DC2C2A /* RajaTec-Bridging-Header.h */; };
+		9A5B93211139DE01B446F8F2 /* Pods_RajaTec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +83,15 @@
 		49659B471FA0F1E700543D1C /* RajaColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RajaColours.swift; sourceTree = "<group>"; };
 		49659B481FA0F1F800543D1C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		49659B491FA0F20600543D1C /* CachingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingKeys.swift; sourceTree = "<group>"; };
+		49A2DFCE1FA1067E00DC2C2A /* RajaTec-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RajaTec-Bridging-Header.h"; sourceTree = "<group>"; };
+		49A2DFCF1FA1067F00DC2C2A /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		49A2DFD01FA1067F00DC2C2A /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		49A2DFD11FA1079F00DC2C2A /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		49A2DFD21FA1079F00DC2C2A /* ConnectionDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDelegates.swift; sourceTree = "<group>"; };
+		49A2DFD31FA1079F00DC2C2A /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RajaTec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71AB50DC14361F5B77663AAE /* Pods-RajaTec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RajaTec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec.debug.xcconfig"; sourceTree = "<group>"; };
+		D55DE94639F4F6696EC32BAC /* Pods-RajaTec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RajaTec.release.xcconfig"; path = "Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +99,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A5B93211139DE01B446F8F2 /* Pods_RajaTec.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1949B54AE210505B8BCC879E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		496461531FA0F7A50004F1BD /* Offers */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +268,8 @@
 			children = (
 				49659B2C1FA0F0CC00543D1C /* RajaTec */,
 				49659B2B1FA0F0CC00543D1C /* Products */,
+				7749B3467290325264383D00 /* Pods */,
+				1949B54AE210505B8BCC879E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,6 +284,7 @@
 		49659B2C1FA0F0CC00543D1C /* RajaTec */ = {
 			isa = PBXGroup;
 			children = (
+				49A2DFCD1FA1066700DC2C2A /* SWRevealViewController */,
 				49659B421FA0F18200543D1C /* Utilities */,
 				49659B411FA0F17500543D1C /* Connection */,
 				49659B401FA0F16E00543D1C /* Models */,
@@ -291,6 +319,9 @@
 		49659B411FA0F17500543D1C /* Connection */ = {
 			isa = PBXGroup;
 			children = (
+				49A2DFD31FA1079F00DC2C2A /* APIEndPoints.swift */,
+				49A2DFD11FA1079F00DC2C2A /* Connection.swift */,
+				49A2DFD21FA1079F00DC2C2A /* ConnectionDelegates.swift */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -337,6 +368,25 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		49A2DFCD1FA1066700DC2C2A /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				49A2DFCF1FA1067F00DC2C2A /* SWRevealViewController.h */,
+				49A2DFD01FA1067F00DC2C2A /* SWRevealViewController.m */,
+				49A2DFCE1FA1067E00DC2C2A /* RajaTec-Bridging-Header.h */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		7749B3467290325264383D00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				71AB50DC14361F5B77663AAE /* Pods-RajaTec.debug.xcconfig */,
+				D55DE94639F4F6696EC32BAC /* Pods-RajaTec.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -344,9 +394,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49659B3C1FA0F0CC00543D1C /* Build configuration list for PBXNativeTarget "RajaTec" */;
 			buildPhases = (
+				346FDDEA9DF296B00BE5A8CA /* [CP] Check Pods Manifest.lock */,
 				49659B261FA0F0CC00543D1C /* Sources */,
 				49659B271FA0F0CC00543D1C /* Frameworks */,
 				49659B281FA0F0CC00543D1C /* Resources */,
+				065EFF1E516246AEA064D2C4 /* [CP] Embed Pods Frameworks */,
+				15FB66F0F8A9D1871337A0B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -369,6 +422,7 @@
 				TargetAttributes = {
 					49659B291FA0F0CC00543D1C = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -411,11 +465,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		065EFF1E516246AEA064D2C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftEventBus/SwiftEventBus.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEventBus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15FB66F0F8A9D1871337A0B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		346FDDEA9DF296B00BE5A8CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RajaTec-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49659B261FA0F0CC00543D1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A2DFD71FA107F600DC2C2A /* SWRevealViewController.h in Sources */,
+				49A2DFD81FA107F600DC2C2A /* SWRevealViewController.m in Sources */,
+				49A2DFD91FA107F600DC2C2A /* RajaTec-Bridging-Header.h in Sources */,
+				49A2DFD41FA107B000DC2C2A /* APIEndPoints.swift in Sources */,
+				49A2DFD51FA107B000DC2C2A /* Connection.swift in Sources */,
+				49A2DFD61FA107B000DC2C2A /* ConnectionDelegates.swift in Sources */,
 				4964619E1FA100C70004F1BD /* BottomBarCollectionViewCell.swift in Sources */,
 				496461991FA100720004F1BD /* SideMenuTableViewCell.swift in Sources */,
 				496461981FA1006F0004F1BD /* ExpandTableViewCell.swift in Sources */,
@@ -572,14 +698,18 @@
 		};
 		49659B3D1FA0F0CC00543D1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71AB50DC14361F5B77663AAE /* Pods-RajaTec.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RajaTec/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RajaTec.RajaTec.RajaTec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RajaTec/SWRevealViewController/RajaTec-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -587,14 +717,17 @@
 		};
 		49659B3E1FA0F0CC00543D1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D55DE94639F4F6696EC32BAC /* Pods-RajaTec.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RajaTec/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RajaTec.RajaTec.RajaTec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RajaTec/SWRevealViewController/RajaTec-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

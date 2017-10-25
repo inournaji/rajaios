@@ -6,6 +6,8 @@
 //  Copyright © 2017 RajaTec. All rights reserved.
 //
 
+import UIKit
+
 enum BottomBarItem : String{
     case main
     case mobiles

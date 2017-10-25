@@ -207,7 +207,7 @@ extension ItemsListViewController: UICollectionViewDelegate, UICollectionViewDat
         switch self.itemListType {
         case .Home:
             
-            let homeCell = self.itemListCollectionView.dequeueReusableCell(withReuseIdentifier: "HomeListCollectionViewCellID", for: indexPath) as? HomeListCollectionViewCell
+            let homeCell = self.itemListCollectionView.dequeueReusableCell(withReuseIdentifier: "HomeListCollectionViewCellID", for: indexPath) as? HomeCollectionViewCell
             
             homeCell?.configureCell(offer: self.homeDataSource[indexPath.item])
             

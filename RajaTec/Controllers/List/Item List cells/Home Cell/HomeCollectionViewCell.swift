@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Kingfisher
 
 class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dealImage: UIImageView!
