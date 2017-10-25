@@ -19,21 +19,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="288" height="201"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPQ-1s-RGa">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HPQ-1s-RGa">
                         <rect key="frame" x="0.0" y="0.0" width="288" height="201"/>
                     </imageView>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DBP-1s-7aJ">
+                        <rect key="frame" x="134" y="90" width="20" height="20"/>
+                        <color key="color" red="0.89411764709999997" green="0.17254901959999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="DBP-1s-7aJ" firstAttribute="centerY" secondItem="HPQ-1s-RGa" secondAttribute="centerY" id="0HF-zj-pn7"/>
                 <constraint firstItem="HPQ-1s-RGa" firstAttribute="leading" secondItem="c9W-Ct-0SZ" secondAttribute="leading" id="SU2-le-H1F"/>
                 <constraint firstItem="c9W-Ct-0SZ" firstAttribute="bottom" secondItem="HPQ-1s-RGa" secondAttribute="bottom" id="U94-Fa-cVI"/>
                 <constraint firstItem="HPQ-1s-RGa" firstAttribute="top" secondItem="c9W-Ct-0SZ" secondAttribute="top" id="WQj-Qp-Ltb"/>
                 <constraint firstItem="c9W-Ct-0SZ" firstAttribute="trailing" secondItem="HPQ-1s-RGa" secondAttribute="trailing" id="rBI-pP-atH"/>
+                <constraint firstItem="DBP-1s-7aJ" firstAttribute="centerX" secondItem="HPQ-1s-RGa" secondAttribute="centerX" id="wYd-5f-QcN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="c9W-Ct-0SZ"/>
             <size key="customSize" width="288" height="201"/>
             <connections>
-                <outlet property="mobileImageView" destination="HPQ-1s-RGa" id="0FY-eE-FDw"/>
+                <outlet property="imageActivityIndicator" destination="DBP-1s-7aJ" id="4tE-wB-nbB"/>
+                <outlet property="mobileDetailImageView" destination="HPQ-1s-RGa" id="oMA-HO-dsH"/>
             </connections>
             <point key="canvasLocation" x="153" y="129.5"/>
         </collectionViewCell>

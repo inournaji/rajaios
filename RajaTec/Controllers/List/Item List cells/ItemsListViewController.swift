@@ -78,7 +78,7 @@ class ItemsListViewController: UIViewController {
         
         self.itemListCollectionView.dataSource = self
         
-        self.itemListCollectionView.register(UINib(nibName: "HomeListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeListCollectionViewCellID")
+        self.itemListCollectionView.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HomeCollectionViewCellID")
         
         self.itemListCollectionView.register(UINib(nibName: "MobileAccessoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MobileAccessoriesCollectionViewCellID")
         
@@ -207,7 +207,7 @@ extension ItemsListViewController: UICollectionViewDelegate, UICollectionViewDat
         switch self.itemListType {
         case .Home:
             
-            let homeCell = self.itemListCollectionView.dequeueReusableCell(withReuseIdentifier: "HomeListCollectionViewCellID", for: indexPath) as? HomeCollectionViewCell
+            let homeCell = self.itemListCollectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionViewCellID", for: indexPath) as? HomeCollectionViewCell
             
             homeCell?.configureCell(offer: self.homeDataSource[indexPath.item])
             
@@ -244,12 +244,24 @@ extension ItemsListViewController: UICollectionViewDelegate, UICollectionViewDat
         switch self.itemListType {
         case .Home:
             
-            self.itemsListViewControllerDelegate?.userDidSelectOffer(selectedOffer: self.homeDataSource[indexPath.item])
+            let homeOffer = self.homeDataSource[indexPath.item]
+            
+            if let link = homeOffer.link, let url = URL(string: link) {
+                
+                if UIApplication.shared.canOpenURL(url) {
+                 
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                
+                }
+                
+            }
             
         case .mobile:
             
-            self.itemsListViewControllerDelegate?.userDidSelectMobile(selectedMobile: self.mobileDataSource[indexPath.item])
+            let mobileItem = self.mobileDataSource[indexPath.item]
             
+            self.itemsListViewControllerDelegate?.userDidSelectMobile(selectedMobile: mobileItem)
+                        
         case .accessories:
             
             self.itemsListViewControllerDelegate?.userDidSelectAccessory(selectedAccessory: self.accessoriesDataSource[indexPath.item])

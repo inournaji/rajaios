@@ -10,9 +10,20 @@ import UIKit
 
 class MobileDetailTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var detailMainLabel: UILabel!
+    @IBOutlet weak var detailValueLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func configure(with mainItem: String, value: String) {
+        
+        self.detailMainLabel.text = mainItem
+        self.detailValueLabel.text = value
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

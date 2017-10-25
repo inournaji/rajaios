@@ -291,7 +291,6 @@
 				49659B3F1FA0F16600543D1C /* Views */,
 				4964615C1FA0F8540004F1BD /* Controllers */,
 				49659B2D1FA0F0CC00543D1C /* AppDelegate.swift */,
-				49659B311FA0F0CC00543D1C /* Main.storyboard */,
 				49659B341FA0F0CC00543D1C /* Assets.xcassets */,
 				49659B361FA0F0CC00543D1C /* LaunchScreen.storyboard */,
 				49659B391FA0F0CC00543D1C /* Info.plist */,
@@ -302,6 +301,7 @@
 		49659B3F1FA0F16600543D1C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				49659B311FA0F0CC00543D1C /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";

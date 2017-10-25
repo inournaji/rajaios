@@ -280,7 +280,7 @@ extension HomeDashboardViewController: ItemsListViewControllerDelegate {
     
     func userDidSelectMobile(selectedMobile: Mobile) {
         
-        //TODO: Push The inner mobile detail screen and send the mobile object
+        self.navigationController?.pushViewController(MobileDetailViewController.getInstance(mobileItem: selectedMobile) , animated: true)
         
     }
     

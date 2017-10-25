@@ -9,10 +9,37 @@
 import UIKit
 
 class MobileGallaryCollectionViewCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var mobileDetailImageView: UIImageView!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
+    
+    var itemImageURL: URL?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
+    func configure(imageLink: String?) {
+        
+        if let imageLink = imageLink, let imageUrl = URL(string: imageLink) {
+            
+            self.itemImageURL = imageUrl
+            
+            self.imageActivityIndicator.startAnimating()
+            
+            self.mobileDetailImageView.kf.setImage(with: imageUrl, completionHandler: { (image, error, cached, url) in
+                
+                if url == self.itemImageURL {
+                    
+                    self.imageActivityIndicator.stopAnimating()
+                    
+                }
+                
+            })
+            
+        }
+        
+    }
+    
 }
