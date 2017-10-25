@@ -25,17 +25,25 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aah-jk-eYU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="aah-jk-eYU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1ze-Ia-OAM"/>
+                    <constraint firstAttribute="trailing" secondItem="aah-jk-eYU" secondAttribute="trailing" id="Nx4-hh-px3"/>
+                    <constraint firstItem="aah-jk-eYU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Zlr-NA-tWS"/>
                     <constraint firstAttribute="trailing" secondItem="h0b-U1-FLs" secondAttribute="trailing" constant="30" id="bP9-a5-M2H"/>
                     <constraint firstItem="h0b-U1-FLs" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="f8b-Fe-tNI"/>
                     <constraint firstItem="h0b-U1-FLs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hYi-RS-pAn"/>
+                    <constraint firstAttribute="bottom" secondItem="aah-jk-eYU" secondAttribute="bottom" id="ycG-zs-cKC"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="expandTitle" destination="h0b-U1-FLs" id="s6X-Xa-AXf"/>
+                <outlet property="selecetButon" destination="aah-jk-eYU" id="Wwi-hA-zQ0"/>
             </connections>
         </tableViewCell>
     </objects>

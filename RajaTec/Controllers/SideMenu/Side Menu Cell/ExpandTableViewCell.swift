@@ -12,6 +12,7 @@ class ExpandTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
     @IBOutlet weak var expandTitle: UILabel!
+    @IBOutlet weak var selecetButon: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -44,9 +44,7 @@ enum ListType {
 
 protocol ItemsListViewControllerDelegate: class {
     
-    func userDidSelectOffer(selectedOffer: Offer)
     func userDidSelectMobile(selectedMobile: Mobile)
-    func userDidSelectAccessory(selectedAccessory: Accessory)
     
 }
 
@@ -72,8 +70,18 @@ class ItemsListViewController: UIViewController {
         
         congifureActivityIndicatorView()
         
-        self.getHomeOffers()
-        
+        switch itemListType {
+        case .Home:
+            self.getHomeOffers()
+            
+        case .mobile:
+            self.getMobiles()
+            
+        case .accessories:
+            self.getAccessories()
+            
+        }
+                
         self.itemListCollectionView.delegate = self
         
         self.itemListCollectionView.dataSource = self
@@ -263,8 +271,7 @@ extension ItemsListViewController: UICollectionViewDelegate, UICollectionViewDat
             self.itemsListViewControllerDelegate?.userDidSelectMobile(selectedMobile: mobileItem)
                         
         case .accessories:
-            
-            self.itemsListViewControllerDelegate?.userDidSelectAccessory(selectedAccessory: self.accessoriesDataSource[indexPath.item])
+                break
             
         }
         

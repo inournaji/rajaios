@@ -194,10 +194,6 @@ extension MobileDetailViewController: UICollectionViewDelegate, UICollectionView
         
     }
     
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-    
-    }
-    
 }
 
 extension MobileDetailViewController {

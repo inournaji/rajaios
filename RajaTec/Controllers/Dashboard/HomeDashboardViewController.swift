@@ -81,6 +81,7 @@ class HomeDashboardViewController: UIViewController {
     
     //MARL: - Variables
     var bottomBarItems: [BottomBarItem] = BottomBarItem.getBottomBarsItems()
+    var selectedBarItem: BottomBarItem = .main
     var fadeView: UIView = UIView()
     var currentMenuX:CGFloat = 0
     var itemListViewControllerSugue = "itemListViewControllerSugue"
@@ -218,6 +219,19 @@ extension HomeDashboardViewController : SWRevealViewControllerDelegate {
                     
                     self.itemsListViewControllers?.itemsListViewControllerDelegate = self
                     
+                    switch self.selectedBarItem {
+                        
+                    case .main:
+                        self.itemsListViewControllers?.itemListType = .Home
+                        
+                    case .mobiles:
+                        self.itemsListViewControllers?.itemListType = .mobile
+                        
+                    case .accessories:
+                        self.itemsListViewControllers?.itemListType = .accessories
+                        
+                    }
+                    
                 }
                 
             }
@@ -238,7 +252,7 @@ extension HomeDashboardViewController: UICollectionViewDelegate, UICollectionVie
         
         self.bottomBarCollectionView.register(UINib(nibName: "BottomBarCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "BottomBarCollectionViewCellID")
         
-        self.bottomBarCollectionView.selectItem(at: bottomBarItems[0].getBottomBarItemIndexPath(), animated: false, scrollPosition: .left)
+        self.bottomBarCollectionView.selectItem(at: selectedBarItem.getBottomBarItemIndexPath(), animated: false, scrollPosition: .left)
         
     }
     
@@ -284,18 +298,23 @@ extension HomeDashboardViewController: ItemsListViewControllerDelegate {
         
     }
     
-    func userDidSelectOffer(selectedOffer: Offer) {
-        
-        //TODO: open offer link
-        
-    }
+}
+
+extension HomeDashboardViewController {
     
-    func userDidSelectAccessory(selectedAccessory: Accessory) {
+    static public func getInstance(with initialBarBottom: BottomBarItem) -> UINavigationController {
         
-        //TODO: Future Implementation
+        let homeDashboardNavViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeDashboardNavViewController") as? UINavigationController
+       
+        if let homeDashboardViewController = homeDashboardNavViewController?.viewControllers[0] as? HomeDashboardViewController {
+        
+            homeDashboardViewController.selectedBarItem = initialBarBottom
+            
+        }
+        
+        return homeDashboardNavViewController!
         
     }
     
 }
-
 

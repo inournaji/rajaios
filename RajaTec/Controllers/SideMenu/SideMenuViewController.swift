@@ -132,6 +132,12 @@ enum ExpandItem {
     
 }
 
+protocol sideMenuExpandDelegate: class {
+    
+    func expandItemClicked(expandItem: ExpandItem)
+    
+}
+
 class SideMenuViewController: UIViewController {
     
     //MARK: - Outlets
@@ -164,7 +170,7 @@ class SideMenuViewController: UIViewController {
     
 }
 
-extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
+extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, sideMenuExpandDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -176,7 +182,7 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         
         let menuCell = self.menuTableView.dequeueReusableCell(withIdentifier: "SideMenuTableViewCellID", for: indexPath) as? SideMenuTableViewCell
         
-        menuCell?.configure(menuItem: self.menuItems[indexPath.row])
+        menuCell?.configure(menuItem: self.menuItems[indexPath.row], delegate: self)
         
         menuCell?.closeMenuButton.addTarget(self, action: #selector(closeSideMenu), for: .touchUpInside)
         
@@ -192,7 +198,9 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if self.menuItems[indexPath.row] == .gallary {
+        switch self.menuItems[indexPath.row] {
+            
+        case .gallary:
             
             if let cell = self.menuTableView.cellForRow(at: indexPath) as? SideMenuTableViewCell {
                 
@@ -201,8 +209,52 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
                 self.menuTableView.endUpdates()
                 
             }
+         
+        case .home:
             
+            if let revealMenu = self.revealViewController() {
+                
+                revealMenu.revealToggle(animated: true)
+                
+            }
+            
+            self.revealViewController().setFront(HomeDashboardViewController.getInstance(with: .main), animated: true)
+            
+            
+        case .warranty:
+            break
+            
+        case .offers:
+            break
+            
+        case .contactUS:
+            break
+            
+        case .termsAndConditions:
+            break
+            
+        case .joinUsonFacebook:
+            
+            let faceBookPage = "https://www.facebook.com/rajatecsyria/"
+            
+            if let faceBookPageUrl = URL(string: faceBookPage) {
+                
+                if UIApplication.shared.canOpenURL(faceBookPageUrl) {
+                    
+                    UIApplication.shared.open(faceBookPageUrl, options: [:], completionHandler: nil)
+                    
+                }
+                
+            }
+            
+            
+        case .language:
+            break
+            
+        case .close:
+            break
         }
+        
     }
     
     @objc func closeSideMenu() {
@@ -210,6 +262,29 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         if let revealMenu = self.revealViewController() {
             
             revealMenu.revealToggle(animated: true)
+            
+        }
+        
+    }
+    
+    func expandItemClicked(expandItem: ExpandItem) {
+        
+        self.menuTableView.beginUpdates()
+        self.menuTableView.endUpdates()
+        
+        if let revealMenu = self.revealViewController() {
+            
+            revealMenu.revealToggle(animated: true)
+            
+        }
+        
+        switch expandItem {
+            
+        case .mobiles:
+            self.revealViewController().setFront(HomeDashboardViewController.getInstance(with: .mobiles), animated: true)
+            
+        case .accessories:
+            self.revealViewController().setFront(HomeDashboardViewController.getInstance(with: .accessories), animated: true)
             
         }
         

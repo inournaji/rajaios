@@ -32,6 +32,8 @@ class SideMenuTableViewCell: UITableViewCell {
     var expandRowHeight = 40
     var expandHeight: CGFloat = 0
     
+    weak var sideMenuExpandDelegate: sideMenuExpandDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -43,7 +45,7 @@ class SideMenuTableViewCell: UITableViewCell {
                 
     }
     
-    func configure(menuItem: MenuItem) {
+    func configure(menuItem: MenuItem, delegate: sideMenuExpandDelegate? = nil) {
         
         self.menuItem = menuItem
         
@@ -62,7 +64,7 @@ class SideMenuTableViewCell: UITableViewCell {
         
         case .contactUS, .gallary, .home, .joinUsonFacebook, .termsAndConditions, .warranty, .offers:
             
-            self.configureMenuItemCell()
+            self.configureMenuItemCell(delegate: delegate)
             
         }
         
@@ -85,7 +87,7 @@ class SideMenuTableViewCell: UITableViewCell {
         
     }
     
-    func configureMenuItemCell() {
+    func configureMenuItemCell(delegate: sideMenuExpandDelegate? = nil) {
         
         self.menuIconImageView.image = self.menuItem.getIcon()
         
@@ -100,6 +102,8 @@ class SideMenuTableViewCell: UITableViewCell {
         self.menuView.isHidden = false
         
         self.languageView.isHidden = true
+        
+        self.sideMenuExpandDelegate = delegate
     }
     
     func ConfigureLanguageCell() {
@@ -185,6 +189,10 @@ extension SideMenuTableViewCell: UITableViewDelegate, UITableViewDataSource {
         
             expandCell.configure(expandItem: self.expandItems[indexPath.row])
             
+            expandCell.selecetButon.tag = indexPath.row
+            
+            expandCell.selecetButon.addTarget(self, action: #selector(didSelectItemAtRow(sender:)), for: .touchUpInside)
+            
             return expandCell
         
         }
@@ -196,6 +204,14 @@ extension SideMenuTableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 40
+        
+    }
+    
+    @objc func didSelectItemAtRow(sender: UIButton) {
+        
+        self.expandCollapse()
+        
+        self.sideMenuExpandDelegate?.expandItemClicked(expandItem: self.expandItems[sender.tag])
         
     }
     

@@ -281,7 +281,7 @@
         <!--Home Dashboard View Controller-->
         <scene sceneID="rCt-g4-Lvb">
             <objects>
-                <viewController id="876-Ud-9tC" customClass="HomeDashboardViewController" customModule="RajaTec" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeDashboardViewControllerID" id="876-Ud-9tC" customClass="HomeDashboardViewController" customModule="RajaTec" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JIS-fS-Bdq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +400,7 @@
         <!--Navigation Controller-->
         <scene sceneID="1nm-74-4dN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="uR6-jq-EWY" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeDashboardNavViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="uR6-jq-EWY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dih-Jx-MY5">
                         <autoresizingMask key="autoresizingMask"/>
