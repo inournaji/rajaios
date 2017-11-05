@@ -10,7 +10,7 @@ import Foundation
 
 enum APIEndPoints: String {
     
-    case rajaApi = "http://rajatec.net/api"
+    case rajaApi = "http://rajatec.net/en/api"
     case getHomeOffers = "/home"
     case getMobiles = "/mobile"
     case getMobileAccessories = "/mobile-accessories"

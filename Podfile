@@ -11,7 +11,7 @@ target 'RajaTec' do
     pod 'SwiftyJSON'
     pod 'NVActivityIndicatorView'
     pod 'SwiftEventBus', :tag => '2.2.0', :git => 'https://github.com/cesarferreira/SwiftEventBus.git'
-
+    
     post_install do |installer|
         installer.pods_project.targets.each do |target|
             target.build_configurations.each do |config|

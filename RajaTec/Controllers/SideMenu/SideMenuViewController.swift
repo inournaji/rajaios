@@ -222,7 +222,13 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
             
             
         case .warranty:
-            break
+            if let revealMenu = self.revealViewController() {
+                
+                revealMenu.revealToggle(animated: true)
+                
+            }
+            
+            self.revealViewController().setFront(WarrantyCheckViewController.getInstance(), animated: true)
             
         case .offers:
             break
@@ -231,7 +237,13 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
             break
             
         case .termsAndConditions:
-            break
+            if let revealMenu = self.revealViewController() {
+                
+                revealMenu.revealToggle(animated: true)
+                
+            }
+            
+            self.revealViewController().setFront(TermsConditionsViewController.getInstance(), animated: true)
             
         case .joinUsonFacebook:
             

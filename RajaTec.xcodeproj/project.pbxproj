@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492E8DF61FAE761800AE978E /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */; };
+		492E8DFA1FAE7F2900AE978E /* WarrantyCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */; };
 		496461651FA0F9030004F1BD /* MobileDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496461631FA0F9030004F1BD /* MobileDetailTableViewCell.swift */; };
 		496461661FA0F9030004F1BD /* MobileDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496461641FA0F9030004F1BD /* MobileDetailTableViewCell.xib */; };
 		496461691FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496461671FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
+		492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyCheckViewController.swift; sourceTree = "<group>"; };
 		496461561FA0F7C70004F1BD /* Accessories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessories.swift; sourceTree = "<group>"; };
 		496461571FA0F7C70004F1BD /* Accessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessory.swift; sourceTree = "<group>"; };
 		496461581FA0F7CE0004F1BD /* Mobiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobiles.swift; sourceTree = "<group>"; };
@@ -114,6 +118,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		492E8DF71FAE762900AE978E /* Terms and Conditions */ = {
+			isa = PBXGroup;
+			children = (
+				492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */,
+			);
+			path = "Terms and Conditions";
+			sourceTree = "<group>";
+		};
+		492E8DF81FAE7F0D00AE978E /* Warranty Check */ = {
+			isa = PBXGroup;
+			children = (
+				492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */,
+			);
+			path = "Warranty Check";
+			sourceTree = "<group>";
+		};
 		496461531FA0F7A50004F1BD /* Offers */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,10 +164,12 @@
 		4964615C1FA0F8540004F1BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				492E8DF81FAE7F0D00AE978E /* Warranty Check */,
 				4964619A1FA100A70004F1BD /* Dashboard */,
 				496461901FA0FFC50004F1BD /* SideMenu */,
 				4964616D1FA0F9BA0004F1BD /* List */,
 				4964615D1FA0F8650004F1BD /* Mobile Detail */,
+				492E8DF71FAE762900AE978E /* Terms and Conditions */,
 				496461A31FA1020D0004F1BD /* RootViewController.swift */,
 			);
 			path = Controllers;
@@ -544,6 +566,7 @@
 				49A2DFD61FA107B000DC2C2A /* ConnectionDelegates.swift in Sources */,
 				4964619E1FA100C70004F1BD /* BottomBarCollectionViewCell.swift in Sources */,
 				496461991FA100720004F1BD /* SideMenuTableViewCell.swift in Sources */,
+				492E8DF61FAE761800AE978E /* TermsConditionsViewController.swift in Sources */,
 				496461981FA1006F0004F1BD /* ExpandTableViewCell.swift in Sources */,
 				496461781FA0FA6F0004F1BD /* Accessories.swift in Sources */,
 				496461791FA0FA6F0004F1BD /* Accessory.swift in Sources */,
@@ -556,6 +579,7 @@
 				4964618F1FA0FF750004F1BD /* ItemsListViewController.swift in Sources */,
 				496461761FA0FA650004F1BD /* UIViewExtension.swift in Sources */,
 				496461751FA0FA620004F1BD /* RajaColours.swift in Sources */,
+				492E8DFA1FAE7F2900AE978E /* WarrantyCheckViewController.swift in Sources */,
 				496461A41FA1020D0004F1BD /* RootViewController.swift in Sources */,
 				496461651FA0F9030004F1BD /* MobileDetailTableViewCell.swift in Sources */,
 				49659B2E1FA0F0CC00543D1C /* AppDelegate.swift in Sources */,
