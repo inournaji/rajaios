@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SideMenuTableViewCell.expandCollapse():SideMenuTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.expandViewHeightCons.constant">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SideMenuTableViewCell.tableView(_:numberOfRowsInSection:):SideMenuTableViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MobileDetailViewController.previousImageAction(_:):MobileDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.currentGallaryIndex &lt;= 0">
+            </PersistentString>
+            <PersistentString
+               value = "self.currentGallaryIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MobileDetailViewController.nextImageAction(_:):MobileDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.currentGallaryIndex == (gallaryImages.count - 1)">
+            </PersistentString>
+            <PersistentString
+               value = "gallaryImages.count - 1">
+            </PersistentString>
+            <PersistentString
+               value = "self.currentGallaryIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
