@@ -234,7 +234,13 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
             break
             
         case .contactUS:
-            break
+            if let revealMenu = self.revealViewController() {
+                
+                revealMenu.revealToggle(animated: true)
+                
+            }
+            
+            self.revealViewController().setFront(ContactUsViewController.getInstance(), animated: true)
             
         case .termsAndConditions:
             if let revealMenu = self.revealViewController() {

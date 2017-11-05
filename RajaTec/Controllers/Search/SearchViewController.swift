@@ -33,9 +33,14 @@ class SearchViewController: UIViewController {
         
         self.fadeView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(removeFade)))
         
-        self.searchBar.becomeFirstResponder()
-        
         self.searchResultLabel.isHidden = true
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.searchBar.becomeFirstResponder()
         
     }
 
