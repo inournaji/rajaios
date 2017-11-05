@@ -46,6 +46,12 @@ class WarrantyCheckViewController: UIViewController {
         
     }
     
+    @IBAction func searchAction(_ sender: Any) {
+        
+        self.present(SearchViewController.getInstance(), animated: true, completion: nil)
+        
+    }
+    
     @IBAction func checkWarrantyAction(_ sender: Any) {
         
         self.view.endEditing(true)

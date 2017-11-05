@@ -99,14 +99,12 @@ class HomeDashboardViewController: UIViewController {
         self.searchButton.tintColor = RajaColors.headerRedColor.getColor()
         
         self.menuButton.tintColor = RajaColors.headerRedColor.getColor()
-        
-        
-        
+                
     }
     
     @IBAction func searchAction(_ sender: Any) {
         
-        
+        self.present(SearchViewController.getInstance(), animated: true, completion: nil)
         
     }
     

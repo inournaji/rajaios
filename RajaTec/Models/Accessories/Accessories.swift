@@ -44,4 +44,18 @@ class Accessories {
         
     }
     
+    class func getAccessoriesAny() -> [Any] {
+        
+        if let decodedData = UserDefaults.standard.object(forKey: CachingKeys.cacheAccessories.rawValue) as?  Data {
+            
+            let decodedOffers = NSKeyedUnarchiver.unarchiveObject(with: decodedData) as? [Accessory]
+            
+            return decodedOffers ?? [Accessory]()
+            
+        }
+        
+        return [Accessory]()
+        
+    }
+    
 }

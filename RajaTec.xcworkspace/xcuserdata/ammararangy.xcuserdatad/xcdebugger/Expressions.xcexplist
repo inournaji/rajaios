@@ -3,15 +3,31 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SearchViewController.collectionView(_:cellForItemAt:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.searchItems">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SideMenuTableViewCell.tableView(_:numberOfRowsInSection:):SideMenuTableViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SearchViewController.searchBar(_:shouldChangeTextIn:replacementText:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchBar.text!.characters.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SideMenuTableViewCell.expandCollapse():SideMenuTableViewCell.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.expandViewHeightCons.constant">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SideMenuTableViewCell.tableView(_:numberOfRowsInSection:):SideMenuTableViewCell.swift">
       </ContextState>
       <ContextState
          contextName = "MobileDetailViewController.previousImageAction(_:):MobileDetailViewController.swift">
@@ -21,6 +37,14 @@
             </PersistentString>
             <PersistentString
                value = "self.currentGallaryIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UIImageView.changeImageTintColor(_:):UIImageExtension.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -35,6 +59,14 @@
             </PersistentString>
             <PersistentString
                value = "self.currentGallaryIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SearchViewController.collectionView(_:numberOfItemsInSection:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.searchItems.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
