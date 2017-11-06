@@ -19,6 +19,7 @@ class SearchViewController: UIViewController {
     
     //MARK: - Variables
     var searchItems: [Any] = [Any]()
+    var didAppear = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,13 @@ class SearchViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.searchBar.becomeFirstResponder()
+        if !didAppear {
+        
+            self.didAppear = true
+            
+            self.searchBar.becomeFirstResponder()
+            
+        }
         
     }
 

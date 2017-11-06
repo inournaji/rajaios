@@ -50,6 +50,7 @@
 		49A2DFD71FA107F600DC2C2A /* SWRevealViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFCF1FA1067F00DC2C2A /* SWRevealViewController.h */; };
 		49A2DFD81FA107F600DC2C2A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFD01FA1067F00DC2C2A /* SWRevealViewController.m */; };
 		49A2DFD91FA107F600DC2C2A /* RajaTec-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFCE1FA1067E00DC2C2A /* RajaTec-Bridging-Header.h */; };
+		49E811A71FB018C000789656 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E811A61FB018C000789656 /* SplashViewController.swift */; };
 		9A5B93211139DE01B446F8F2 /* Pods_RajaTec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		49A2DFD11FA1079F00DC2C2A /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		49A2DFD21FA1079F00DC2C2A /* ConnectionDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDelegates.swift; sourceTree = "<group>"; };
 		49A2DFD31FA1079F00DC2C2A /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		49E811A61FB018C000789656 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RajaTec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AB50DC14361F5B77663AAE /* Pods-RajaTec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RajaTec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec.debug.xcconfig"; sourceTree = "<group>"; };
 		D55DE94639F4F6696EC32BAC /* Pods-RajaTec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RajaTec.release.xcconfig"; path = "Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		4964615C1FA0F8540004F1BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				49E811A51FB018AB00789656 /* Splash */,
 				49924B4C1FAEB7350035B774 /* Contact Us */,
 				49924B451FAE9B3E0035B774 /* Search */,
 				492E8DF81FAE7F0D00AE978E /* Warranty Check */,
@@ -425,6 +428,14 @@
 			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
+		49E811A51FB018AB00789656 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				49E811A61FB018C000789656 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		7749B3467290325264383D00 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -586,6 +597,7 @@
 				49A2DFD71FA107F600DC2C2A /* SWRevealViewController.h in Sources */,
 				49A2DFD81FA107F600DC2C2A /* SWRevealViewController.m in Sources */,
 				49A2DFD91FA107F600DC2C2A /* RajaTec-Bridging-Header.h in Sources */,
+				49E811A71FB018C000789656 /* SplashViewController.swift in Sources */,
 				49A2DFD41FA107B000DC2C2A /* APIEndPoints.swift in Sources */,
 				49A2DFD51FA107B000DC2C2A /* Connection.swift in Sources */,
 				49A2DFD61FA107B000DC2C2A /* ConnectionDelegates.swift in Sources */,
