@@ -1,0 +1,67 @@
+/* No Localized Strings */
+
+"Brand" = "النوع";
+
+"Camera" = "الكاميرا";
+
+"Screen" = "الشاشة";
+
+"Ram" = "الرام";
+
+"Storage" = "الذاكرة";
+
+"Battery" = "البطارية";
+
+"Price" = "السعر";
+
+"Processor" = "المعالج";
+
+"Name cannot be empty" = "الاسم يجب أن لاكون فارغاً";
+
+"Mobile cannot be empty" = "رقم الجوال يجب أن لايكون فارغاً";
+
+"Mobile cannot be less than 10 characters" = "رقم الجوال يجب أن يكون أكثر من ١٠ ارقام";
+
+"Message cannot be empty" = "الرسالة يجب أن لا تكون غارفة";
+
+"Message cannot be less than 10 characters" = "الرسالة يجب أن تكون أكثر من ١٠ حروف";
+
+"Error" = "خطأ";
+
+"There was an error in connection" = "حدث خطأ في الأتصال بالشبكة";
+
+"Retry" = "إعادة المحاولة";
+
+"Cancel" = "إنهاء";
+
+"Success" = "نجاح";
+
+"Thank you for your message" = "شكرا لتواصلكم معنا";
+
+"OK" = "حسناً";
+
+"Please enter IMEI code" = "الرجاء إدخال رمز الIMEI";
+
+"Main" = "الرئيسية";
+
+"Mobiles" = "الجوالات";
+
+"Accessories" = "الملحقات";
+
+"Home" = "الرئيسية";
+
+"Gallary" = "المعرض";
+
+"Warranty"  = "الضمان";
+
+"Offers" = "العروض";
+
+"Contact Us" = "الإتصال بنا";
+
+"Terms and Conditions" = "شروط الضمان";
+
+"Join us on Facebook" = "الإنضمام لصفحتنا على الفيسبوك";
+
+"mobiles" = "الجوالات";
+
+"accessories" = "الملحقات";

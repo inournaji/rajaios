@@ -42,7 +42,8 @@ class SideMenuTableViewCell: UITableViewCell {
         self.expandTableView.dataSource = self
         
         self.expandTableView.register(UINib(nibName: "ExpandTableViewCell", bundle: nil), forCellReuseIdentifier: "ExpandTableViewCellID")
-                
+        
+        
     }
     
     func configure(menuItem: MenuItem, delegate: sideMenuExpandDelegate? = nil) {
@@ -112,6 +113,16 @@ class SideMenuTableViewCell: UITableViewCell {
         
         self.languageView.isHidden = false
     
+        if BundleLocalization.sharedInstance().language == "en" {
+            
+            self.languageSelection(buttonPressed: englishButton)
+            
+        } else {
+            
+            self.languageSelection(buttonPressed: arabicButton)
+            
+        }
+        
     }
     
     func calculateExpandViewHeight() {
@@ -141,7 +152,13 @@ class SideMenuTableViewCell: UITableViewCell {
         
         if let englishButton = sender as? UIButton {
             
-            self.languageSelection(buttonPressed: englishButton)
+            if !UserDefaults().bool(forKey: SplashViewController.userLanguageKey) {
+                
+                self.languageSelection(buttonPressed: englishButton)
+                
+                BundleLocalization.sharedInstance().language = "en"
+                
+            }
             
         }
         
@@ -151,7 +168,13 @@ class SideMenuTableViewCell: UITableViewCell {
     
         if let arabicButton = sender as? UIButton {
             
-            self.languageSelection(buttonPressed: arabicButton)
+            if UserDefaults().bool(forKey: SplashViewController.userLanguageKey) {
+                                
+                self.languageSelection(buttonPressed: arabicButton)
+                
+                BundleLocalization.sharedInstance().language = "ar"
+                
+            }
             
         }
     

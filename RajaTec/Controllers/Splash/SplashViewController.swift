@@ -24,6 +24,8 @@ class SplashViewController: UIViewController {
     
     //MARK: - Variables
     var connectionActivityIndicator: NVActivityIndicatorView?
+    static var userLanguageKey = "userLanguageKey"
+    var changeLanguage: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,22 @@ class SplashViewController: UIViewController {
         self.splash6ImageView.alpha = 0
         self.splash7ImageView.alpha = 0
         self.splash8ImageView.alpha = 0
+        
+        if changeLanguage {
+            
+            if let controllers = self.navigationController?.viewControllers {
+                
+                for controller in controllers {
+                    
+                    self.navigationController?.popToViewController(controller, animated: false)
+                    
+                }
+                
+            }
+            
+            self.navigationController?.setViewControllers([self], animated: false)
+            
+        }
         
     }
     
@@ -146,4 +164,18 @@ class SplashViewController: UIViewController {
         
     }
 
+}
+
+extension SplashViewController {
+    
+    class public func getInstance(changeLanguage: Bool = false) ->  SplashViewController{
+        
+        let splashViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashViewControllerID") as? SplashViewController
+        
+        splashViewController?.changeLanguage = changeLanguage
+        
+        return splashViewController!
+        
+    }
+    
 }

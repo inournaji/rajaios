@@ -10,13 +10,17 @@
 		492E8DF61FAE761800AE978E /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */; };
 		492E8DFA1FAE7F2900AE978E /* WarrantyCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */; };
 		494C72411FB3C3270095EA56 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C72401FB3C27C0095EA56 /* ContactUs.swift */; };
+		494C72451FB3D7550095EA56 /* MobileAccessoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494C72471FB3D7550095EA56 /* MobileAccessoriesCollectionViewCell.xib */; };
+		494C72481FB3D7650095EA56 /* BottomBarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494C724A1FB3D7650095EA56 /* BottomBarCollectionViewCell.xib */; };
+		494C724B1FB3D76C0095EA56 /* ExpandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494C724D1FB3D76C0095EA56 /* ExpandTableViewCell.xib */; };
+		494C724E1FB3D76F0095EA56 /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494C72501FB3D76F0095EA56 /* SideMenuTableViewCell.xib */; };
+		494C72511FB3D7780095EA56 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494C72531FB3D7780095EA56 /* HomeCollectionViewCell.xib */; };
+		494C72541FB3D77C0095EA56 /* MobileDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494C72561FB3D77C0095EA56 /* MobileDetailTableViewCell.xib */; };
+		494C72571FB3D7800095EA56 /* MobileGallaryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494C72591FB3D7800095EA56 /* MobileGallaryCollectionViewCell.xib */; };
 		496461651FA0F9030004F1BD /* MobileDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496461631FA0F9030004F1BD /* MobileDetailTableViewCell.swift */; };
-		496461661FA0F9030004F1BD /* MobileDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496461641FA0F9030004F1BD /* MobileDetailTableViewCell.xib */; };
 		496461691FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496461671FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.swift */; };
-		4964616A1FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496461681FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.xib */; };
 		4964616C1FA0F9690004F1BD /* MobileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964616B1FA0F9690004F1BD /* MobileDetailViewController.swift */; };
 		496461731FA0F9FD0004F1BD /* MobileAccessoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496461711FA0F9FD0004F1BD /* MobileAccessoriesCollectionViewCell.swift */; };
-		496461741FA0F9FD0004F1BD /* MobileAccessoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496461721FA0F9FD0004F1BD /* MobileAccessoriesCollectionViewCell.xib */; };
 		496461751FA0FA620004F1BD /* RajaColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49659B471FA0F1E700543D1C /* RajaColours.swift */; };
 		496461761FA0FA650004F1BD /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49659B481FA0F1F800543D1C /* UIViewExtension.swift */; };
 		496461771FA0FA680004F1BD /* CachingKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49659B491FA0F20600543D1C /* CachingKeys.swift */; };
@@ -26,7 +30,6 @@
 		4964617B1FA0FA6F0004F1BD /* Mobiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496461581FA0F7CE0004F1BD /* Mobiles.swift */; };
 		4964617C1FA0FA6F0004F1BD /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964615A1FA0F7D60004F1BD /* Offer.swift */; };
 		4964617D1FA0FA6F0004F1BD /* Offers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964615B1FA0F7D60004F1BD /* Offers.swift */; };
-		4964618B1FA0FCD30004F1BD /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496461891FA0FCD30004F1BD /* HomeCollectionViewCell.xib */; };
 		4964618D1FA0FE570004F1BD /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964618C1FA0FE570004F1BD /* HomeCollectionViewCell.swift */; };
 		4964618F1FA0FF750004F1BD /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964618E1FA0FF750004F1BD /* ItemsListViewController.swift */; };
 		496461971FA100200004F1BD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496461961FA100200004F1BD /* SideMenuViewController.swift */; };
@@ -35,9 +38,6 @@
 		4964619E1FA100C70004F1BD /* BottomBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964619C1FA100BF0004F1BD /* BottomBarCollectionViewCell.swift */; };
 		496461A01FA100ED0004F1BD /* HomeDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964619F1FA100ED0004F1BD /* HomeDashboardViewController.swift */; };
 		496461A41FA1020D0004F1BD /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496461A31FA1020D0004F1BD /* RootViewController.swift */; };
-		496461A51FA1024D0004F1BD /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496461951FA0FFE50004F1BD /* SideMenuTableViewCell.xib */; };
-		496461A61FA102530004F1BD /* ExpandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 496461931FA0FFE50004F1BD /* ExpandTableViewCell.xib */; };
-		496461A71FA1025A0004F1BD /* BottomBarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4964619D1FA100BF0004F1BD /* BottomBarCollectionViewCell.xib */; };
 		49659B2E1FA0F0CC00543D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49659B2D1FA0F0CC00543D1C /* AppDelegate.swift */; };
 		49659B331FA0F0CC00543D1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49659B311FA0F0CC00543D1C /* Main.storyboard */; };
 		49659B351FA0F0CC00543D1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49659B341FA0F0CC00543D1C /* Assets.xcassets */; };
@@ -51,6 +51,9 @@
 		49A2DFD71FA107F600DC2C2A /* SWRevealViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFCF1FA1067F00DC2C2A /* SWRevealViewController.h */; };
 		49A2DFD81FA107F600DC2C2A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFD01FA1067F00DC2C2A /* SWRevealViewController.m */; };
 		49A2DFD91FA107F600DC2C2A /* RajaTec-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFCE1FA1067E00DC2C2A /* RajaTec-Bridging-Header.h */; };
+		49E307431FB3E047006EEB0E /* BundleLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E307401FB3E047006EEB0E /* BundleLocalization.m */; };
+		49E307441FB3E047006EEB0E /* NSBundle+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E307421FB3E047006EEB0E /* NSBundle+Localization.m */; };
+		49E3074A1FB3EE3C006EEB0E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49E307481FB3EE3B006EEB0E /* Localizable.strings */; };
 		49E811A71FB018C000789656 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E811A61FB018C000789656 /* SplashViewController.swift */; };
 		9A5B93211139DE01B446F8F2 /* Pods_RajaTec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +62,13 @@
 		492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyCheckViewController.swift; sourceTree = "<group>"; };
 		494C72401FB3C27C0095EA56 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
+		494C72461FB3D7550095EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MobileAccessoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		494C72491FB3D7650095EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BottomBarCollectionViewCell.xib; sourceTree = "<group>"; };
+		494C724C1FB3D76C0095EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ExpandTableViewCell.xib; sourceTree = "<group>"; };
+		494C724F1FB3D76F0095EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SideMenuTableViewCell.xib; sourceTree = "<group>"; };
+		494C72521FB3D7780095EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		494C72551FB3D77C0095EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MobileDetailTableViewCell.xib; sourceTree = "<group>"; };
+		494C72581FB3D7800095EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MobileGallaryCollectionViewCell.xib; sourceTree = "<group>"; };
 		496461561FA0F7C70004F1BD /* Accessories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessories.swift; sourceTree = "<group>"; };
 		496461571FA0F7C70004F1BD /* Accessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessory.swift; sourceTree = "<group>"; };
 		496461581FA0F7CE0004F1BD /* Mobiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mobiles.swift; sourceTree = "<group>"; };
@@ -66,22 +76,15 @@
 		4964615A1FA0F7D60004F1BD /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		4964615B1FA0F7D60004F1BD /* Offers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offers.swift; sourceTree = "<group>"; };
 		496461631FA0F9030004F1BD /* MobileDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailTableViewCell.swift; sourceTree = "<group>"; };
-		496461641FA0F9030004F1BD /* MobileDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileDetailTableViewCell.xib; sourceTree = "<group>"; };
 		496461671FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileGallaryCollectionViewCell.swift; sourceTree = "<group>"; };
-		496461681FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileGallaryCollectionViewCell.xib; sourceTree = "<group>"; };
 		4964616B1FA0F9690004F1BD /* MobileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewController.swift; sourceTree = "<group>"; };
 		496461711FA0F9FD0004F1BD /* MobileAccessoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAccessoriesCollectionViewCell.swift; sourceTree = "<group>"; };
-		496461721FA0F9FD0004F1BD /* MobileAccessoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileAccessoriesCollectionViewCell.xib; sourceTree = "<group>"; };
-		496461891FA0FCD30004F1BD /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		4964618C1FA0FE570004F1BD /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		4964618E1FA0FF750004F1BD /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
 		496461921FA0FFE50004F1BD /* ExpandTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandTableViewCell.swift; sourceTree = "<group>"; };
-		496461931FA0FFE50004F1BD /* ExpandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpandTableViewCell.xib; sourceTree = "<group>"; };
 		496461941FA0FFE50004F1BD /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
-		496461951FA0FFE50004F1BD /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
 		496461961FA100200004F1BD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		4964619C1FA100BF0004F1BD /* BottomBarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarCollectionViewCell.swift; sourceTree = "<group>"; };
-		4964619D1FA100BF0004F1BD /* BottomBarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomBarCollectionViewCell.xib; sourceTree = "<group>"; };
 		4964619F1FA100ED0004F1BD /* HomeDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDashboardViewController.swift; sourceTree = "<group>"; };
 		496461A31FA1020D0004F1BD /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		49659B2A1FA0F0CC00543D1C /* RajaTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RajaTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +105,29 @@
 		49A2DFD11FA1079F00DC2C2A /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		49A2DFD21FA1079F00DC2C2A /* ConnectionDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDelegates.swift; sourceTree = "<group>"; };
 		49A2DFD31FA1079F00DC2C2A /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		49E3073F1FB3E046006EEB0E /* BundleLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleLocalization.h; sourceTree = SOURCE_ROOT; };
+		49E307401FB3E047006EEB0E /* BundleLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleLocalization.m; sourceTree = SOURCE_ROOT; };
+		49E307411FB3E047006EEB0E /* NSBundle+Localization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Localization.h"; sourceTree = SOURCE_ROOT; };
+		49E307421FB3E047006EEB0E /* NSBundle+Localization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Localization.m"; sourceTree = SOURCE_ROOT; };
+		49E307491FB3EE3B006EEB0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = RajaTec/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		49E3074C1FB3EE86006EEB0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		49E3074E1FB3EE8D006EEB0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BottomBarCollectionViewCell.strings; sourceTree = "<group>"; };
+		49E307501FB3EE90006EEB0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ExpandTableViewCell.strings; sourceTree = "<group>"; };
+		49E307521FB3EE93006EEB0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SideMenuTableViewCell.strings; sourceTree = "<group>"; };
+		49E307541FB3EE96006EEB0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MobileAccessoriesCollectionViewCell.strings; sourceTree = "<group>"; };
+		49E307561FB3EE99006EEB0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HomeCollectionViewCell.strings; sourceTree = "<group>"; };
+		49E307581FB3EE9C006EEB0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MobileDetailTableViewCell.strings; sourceTree = "<group>"; };
+		49E3075A1FB3EE9F006EEB0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MobileGallaryCollectionViewCell.strings; sourceTree = "<group>"; };
+		49E3075B1FB3EEB4006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		49E3075C1FB3EEB4006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/BottomBarCollectionViewCell.strings; sourceTree = "<group>"; };
+		49E3075D1FB3EEB4006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/ExpandTableViewCell.strings; sourceTree = "<group>"; };
+		49E3075E1FB3EEB4006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SideMenuTableViewCell.strings; sourceTree = "<group>"; };
+		49E3075F1FB3EEB4006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MobileAccessoriesCollectionViewCell.strings; sourceTree = "<group>"; };
+		49E307601FB3EEB4006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/HomeCollectionViewCell.strings; sourceTree = "<group>"; };
+		49E307611FB3EEB4006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MobileDetailTableViewCell.strings; sourceTree = "<group>"; };
+		49E307621FB3EEB4006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/MobileGallaryCollectionViewCell.strings; sourceTree = "<group>"; };
+		49E307631FB3EEB4006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		49E307641FB3EEB5006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = RajaTec/ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		49E811A61FB018C000789656 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RajaTec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AB50DC14361F5B77663AAE /* Pods-RajaTec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RajaTec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				496461631FA0F9030004F1BD /* MobileDetailTableViewCell.swift */,
-				496461641FA0F9030004F1BD /* MobileDetailTableViewCell.xib */,
+				494C72561FB3D77C0095EA56 /* MobileDetailTableViewCell.xib */,
 			);
 			path = "Mobile Inner Cells";
 			sourceTree = "<group>";
@@ -227,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				496461671FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.swift */,
-				496461681FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.xib */,
+				494C72591FB3D7800095EA56 /* MobileGallaryCollectionViewCell.xib */,
 			);
 			path = "Mobile Gallary Cell";
 			sourceTree = "<group>";
@@ -254,7 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				496461711FA0F9FD0004F1BD /* MobileAccessoriesCollectionViewCell.swift */,
-				496461721FA0F9FD0004F1BD /* MobileAccessoriesCollectionViewCell.xib */,
+				494C72471FB3D7550095EA56 /* MobileAccessoriesCollectionViewCell.xib */,
 			);
 			path = "Mobiles Accessories Cell";
 			sourceTree = "<group>";
@@ -262,7 +288,7 @@
 		496461701FA0F9D30004F1BD /* Home Cell */ = {
 			isa = PBXGroup;
 			children = (
-				496461891FA0FCD30004F1BD /* HomeCollectionViewCell.xib */,
+				494C72531FB3D7780095EA56 /* HomeCollectionViewCell.xib */,
 				4964618C1FA0FE570004F1BD /* HomeCollectionViewCell.swift */,
 			);
 			path = "Home Cell";
@@ -281,9 +307,9 @@
 			isa = PBXGroup;
 			children = (
 				496461921FA0FFE50004F1BD /* ExpandTableViewCell.swift */,
-				496461931FA0FFE50004F1BD /* ExpandTableViewCell.xib */,
+				494C724D1FB3D76C0095EA56 /* ExpandTableViewCell.xib */,
 				496461941FA0FFE50004F1BD /* SideMenuTableViewCell.swift */,
-				496461951FA0FFE50004F1BD /* SideMenuTableViewCell.xib */,
+				494C72501FB3D76F0095EA56 /* SideMenuTableViewCell.xib */,
 			);
 			path = "Side Menu Cell";
 			sourceTree = "<group>";
@@ -301,7 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				4964619C1FA100BF0004F1BD /* BottomBarCollectionViewCell.swift */,
-				4964619D1FA100BF0004F1BD /* BottomBarCollectionViewCell.xib */,
+				494C724A1FB3D7650095EA56 /* BottomBarCollectionViewCell.xib */,
 			);
 			path = "Bottom Bar Cell";
 			sourceTree = "<group>";
@@ -309,6 +335,7 @@
 		49659B211FA0F0CC00543D1C = {
 			isa = PBXGroup;
 			children = (
+				49E307481FB3EE3B006EEB0E /* Localizable.strings */,
 				49659B2C1FA0F0CC00543D1C /* RajaTec */,
 				49659B2B1FA0F0CC00543D1C /* Products */,
 				7749B3467290325264383D00 /* Pods */,
@@ -409,6 +436,7 @@
 		49659B461FA0F1B300543D1C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				49E3073E1FB3E035006EEB0E /* Localization */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -437,6 +465,17 @@
 				49A2DFCE1FA1067E00DC2C2A /* RajaTec-Bridging-Header.h */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		49E3073E1FB3E035006EEB0E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				49E3073F1FB3E046006EEB0E /* BundleLocalization.h */,
+				49E307401FB3E047006EEB0E /* BundleLocalization.m */,
+				49E307411FB3E047006EEB0E /* NSBundle+Localization.h */,
+				49E307421FB3E047006EEB0E /* NSBundle+Localization.m */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		49E811A51FB018AB00789656 /* Splash */ = {
@@ -503,6 +542,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 49659B211FA0F0CC00543D1C;
 			productRefGroup = 49659B2B1FA0F0CC00543D1C /* Products */;
@@ -519,16 +559,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				496461A71FA1025A0004F1BD /* BottomBarCollectionViewCell.xib in Resources */,
-				496461A61FA102530004F1BD /* ExpandTableViewCell.xib in Resources */,
-				496461A51FA1024D0004F1BD /* SideMenuTableViewCell.xib in Resources */,
-				496461661FA0F9030004F1BD /* MobileDetailTableViewCell.xib in Resources */,
+				494C72481FB3D7650095EA56 /* BottomBarCollectionViewCell.xib in Resources */,
+				49E3074A1FB3EE3C006EEB0E /* Localizable.strings in Resources */,
+				494C724B1FB3D76C0095EA56 /* ExpandTableViewCell.xib in Resources */,
+				494C724E1FB3D76F0095EA56 /* SideMenuTableViewCell.xib in Resources */,
+				494C72541FB3D77C0095EA56 /* MobileDetailTableViewCell.xib in Resources */,
 				49659B381FA0F0CC00543D1C /* LaunchScreen.storyboard in Resources */,
-				4964616A1FA0F92B0004F1BD /* MobileGallaryCollectionViewCell.xib in Resources */,
+				494C72571FB3D7800095EA56 /* MobileGallaryCollectionViewCell.xib in Resources */,
 				49659B351FA0F0CC00543D1C /* Assets.xcassets in Resources */,
 				49659B331FA0F0CC00543D1C /* Main.storyboard in Resources */,
-				4964618B1FA0FCD30004F1BD /* HomeCollectionViewCell.xib in Resources */,
-				496461741FA0F9FD0004F1BD /* MobileAccessoriesCollectionViewCell.xib in Resources */,
+				494C72511FB3D7780095EA56 /* HomeCollectionViewCell.xib in Resources */,
+				494C72451FB3D7550095EA56 /* MobileAccessoriesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +652,7 @@
 				49A2DFD91FA107F600DC2C2A /* RajaTec-Bridging-Header.h in Sources */,
 				49E811A71FB018C000789656 /* SplashViewController.swift in Sources */,
 				49A2DFD41FA107B000DC2C2A /* APIEndPoints.swift in Sources */,
+				49E307431FB3E047006EEB0E /* BundleLocalization.m in Sources */,
 				49A2DFD51FA107B000DC2C2A /* Connection.swift in Sources */,
 				49A2DFD61FA107B000DC2C2A /* ConnectionDelegates.swift in Sources */,
 				4964619E1FA100C70004F1BD /* BottomBarCollectionViewCell.swift in Sources */,
@@ -630,6 +672,7 @@
 				4964618F1FA0FF750004F1BD /* ItemsListViewController.swift in Sources */,
 				496461761FA0FA650004F1BD /* UIViewExtension.swift in Sources */,
 				496461751FA0FA620004F1BD /* RajaColours.swift in Sources */,
+				49E307441FB3E047006EEB0E /* NSBundle+Localization.m in Sources */,
 				492E8DFA1FAE7F2900AE978E /* WarrantyCheckViewController.swift in Sources */,
 				496461A41FA1020D0004F1BD /* RootViewController.swift in Sources */,
 				496461651FA0F9030004F1BD /* MobileDetailTableViewCell.swift in Sources */,
@@ -646,10 +689,82 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		494C72471FB3D7550095EA56 /* MobileAccessoriesCollectionViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494C72461FB3D7550095EA56 /* Base */,
+				49E307541FB3EE96006EEB0E /* en */,
+				49E3075F1FB3EEB4006EEB0E /* ar */,
+			);
+			name = MobileAccessoriesCollectionViewCell.xib;
+			sourceTree = "<group>";
+		};
+		494C724A1FB3D7650095EA56 /* BottomBarCollectionViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494C72491FB3D7650095EA56 /* Base */,
+				49E3074E1FB3EE8D006EEB0E /* en */,
+				49E3075C1FB3EEB4006EEB0E /* ar */,
+			);
+			name = BottomBarCollectionViewCell.xib;
+			sourceTree = "<group>";
+		};
+		494C724D1FB3D76C0095EA56 /* ExpandTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494C724C1FB3D76C0095EA56 /* Base */,
+				49E307501FB3EE90006EEB0E /* en */,
+				49E3075D1FB3EEB4006EEB0E /* ar */,
+			);
+			name = ExpandTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		494C72501FB3D76F0095EA56 /* SideMenuTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494C724F1FB3D76F0095EA56 /* Base */,
+				49E307521FB3EE93006EEB0E /* en */,
+				49E3075E1FB3EEB4006EEB0E /* ar */,
+			);
+			name = SideMenuTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		494C72531FB3D7780095EA56 /* HomeCollectionViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494C72521FB3D7780095EA56 /* Base */,
+				49E307561FB3EE99006EEB0E /* en */,
+				49E307601FB3EEB4006EEB0E /* ar */,
+			);
+			name = HomeCollectionViewCell.xib;
+			sourceTree = "<group>";
+		};
+		494C72561FB3D77C0095EA56 /* MobileDetailTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494C72551FB3D77C0095EA56 /* Base */,
+				49E307581FB3EE9C006EEB0E /* en */,
+				49E307611FB3EEB4006EEB0E /* ar */,
+			);
+			name = MobileDetailTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		494C72591FB3D7800095EA56 /* MobileGallaryCollectionViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				494C72581FB3D7800095EA56 /* Base */,
+				49E3075A1FB3EE9F006EEB0E /* en */,
+				49E307621FB3EEB4006EEB0E /* ar */,
+			);
+			name = MobileGallaryCollectionViewCell.xib;
+			sourceTree = "<group>";
+		};
 		49659B311FA0F0CC00543D1C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				49659B321FA0F0CC00543D1C /* Base */,
+				49E3074C1FB3EE86006EEB0E /* en */,
+				49E3075B1FB3EEB4006EEB0E /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -658,8 +773,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				49659B371FA0F0CC00543D1C /* Base */,
+				49E307631FB3EEB4006EEB0E /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		49E307481FB3EE3B006EEB0E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49E307491FB3EE3B006EEB0E /* en */,
+				49E307641FB3EEB5006EEB0E /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -669,6 +794,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -726,6 +852,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

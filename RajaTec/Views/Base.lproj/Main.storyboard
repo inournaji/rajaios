@@ -15,7 +15,7 @@
         <!--Splash View Controller-->
         <scene sceneID="Jd4-WB-X4p">
             <objects>
-                <viewController id="kaJ-T9-rJa" customClass="SplashViewController" customModule="RajaTec" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashViewControllerID" id="kaJ-T9-rJa" customClass="SplashViewController" customModule="RajaTec" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3uY-Df-yUn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,6 +403,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OaK-He-dK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1660" y="-376"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xS2-xa-kSz">
+            <objects>
+                <viewController id="tPS-y7-jRi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="So9-LW-2Jd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, there are no offers." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xii-li-fFB">
+                                <rect key="frame" x="4" y="284" width="300" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QaN-nf-CYN" firstAttribute="trailing" secondItem="xii-li-fFB" secondAttribute="trailing" constant="16" id="8Lu-Tz-lMT"/>
+                            <constraint firstItem="xii-li-fFB" firstAttribute="leading" secondItem="QaN-nf-CYN" secondAttribute="leading" constant="4" id="EMZ-5A-QIH"/>
+                            <constraint firstItem="xii-li-fFB" firstAttribute="centerY" secondItem="QaN-nf-CYN" secondAttribute="centerY" id="y2c-2c-O5H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QaN-nf-CYN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsJ-DX-o3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2884" y="-1225"/>
         </scene>
         <!--Terms Conditions View Controller-->
         <scene sceneID="fdw-wm-UnL">

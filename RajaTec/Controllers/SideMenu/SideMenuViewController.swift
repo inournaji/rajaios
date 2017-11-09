@@ -184,6 +184,10 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
         
         menuCell?.configure(menuItem: self.menuItems[indexPath.row], delegate: self)
         
+        menuCell?.englishButton.addTarget(self, action: #selector(englishTapAction(_:)), for: .touchUpInside)
+        
+        menuCell?.arabicButton.addTarget(self, action: #selector(arabicTapAction(_:)), for: .touchUpInside)
+        
         menuCell?.closeMenuButton.addTarget(self, action: #selector(closeSideMenu), for: .touchUpInside)
         
         return menuCell!
@@ -270,6 +274,40 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
             
         case .close:
             break
+        }
+        
+    }
+    
+    //MARK: - Actions
+    @IBAction func englishTapAction(_ sender: Any) {
+        
+        if !UserDefaults().bool(forKey: SplashViewController.userLanguageKey) {
+            
+            UserDefaults().set(true, forKey: SplashViewController.userLanguageKey)
+            
+            if let revealVC = self.revealViewController() {
+                
+                revealVC.navigationController?.pushViewController(SplashViewController.getInstance(changeLanguage: true), animated: true)
+                
+            }
+            
+        }
+        
+        
+    }
+    
+    @IBAction func arabicTapAction(_ sender: Any) {
+        
+        if UserDefaults().bool(forKey: SplashViewController.userLanguageKey) {
+            
+            UserDefaults().set(false, forKey: SplashViewController.userLanguageKey)
+            
+            if let revealVC = self.revealViewController() {
+                
+                revealVC.navigationController?.pushViewController(SplashViewController.getInstance(changeLanguage: true), animated: true)
+                
+            }
+            
         }
         
     }

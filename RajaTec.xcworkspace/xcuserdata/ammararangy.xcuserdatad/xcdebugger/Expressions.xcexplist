@@ -14,6 +14,14 @@
          contextName = "SideMenuTableViewCell.tableView(_:numberOfRowsInSection:):SideMenuTableViewCell.swift">
       </ContextState>
       <ContextState
+         contextName = "SplashViewController.viewDidLoad():SplashViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController?.viewControllers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SearchViewController.searchBar(_:shouldChangeTextIn:replacementText:):SearchViewController.swift">
          <PersistentStrings>
             <PersistentString
