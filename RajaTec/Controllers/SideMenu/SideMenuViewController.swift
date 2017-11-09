@@ -215,20 +215,19 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
             if let revealMenu = self.revealViewController() {
                 
                 revealMenu.revealToggle(animated: true)
+             
+                revealMenu.setFront(HomeDashboardViewController.getInstance(with: .main), animated: true)
                 
             }
-            
-            self.revealViewController().setFront(HomeDashboardViewController.getInstance(with: .main), animated: true)
-            
             
         case .warranty:
             if let revealMenu = self.revealViewController() {
                 
                 revealMenu.revealToggle(animated: true)
                 
+                revealMenu.setFront(WarrantyCheckViewController.getInstance(), animated: true)
+                
             }
-            
-            self.revealViewController().setFront(WarrantyCheckViewController.getInstance(), animated: true)
             
         case .offers:
             break
@@ -238,18 +237,18 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
                 
                 revealMenu.revealToggle(animated: true)
                 
+                revealMenu.setFront(ContactUsViewController.getInstance(), animated: true)
+                
             }
-            
-            self.revealViewController().setFront(ContactUsViewController.getInstance(), animated: true)
             
         case .termsAndConditions:
             if let revealMenu = self.revealViewController() {
                 
                 revealMenu.revealToggle(animated: true)
                 
+                revealMenu.setFront(TermsConditionsViewController.getInstance(), animated: true)
+                
             }
-            
-            self.revealViewController().setFront(TermsConditionsViewController.getInstance(), animated: true)
             
         case .joinUsonFacebook:
             

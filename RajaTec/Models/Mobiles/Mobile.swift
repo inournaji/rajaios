@@ -15,7 +15,7 @@ public class Mobile: NSObject, NSCoding {
         static let battery = "Battery"
         static let screenSize = "Screen size"
         static let camera = "Camera"
-        static let companyName = "companyName"
+        static let companyName = "Company"
         static let isOffer = "is_offer"
         static let storage = "Storage"
         static let nid = "nid"

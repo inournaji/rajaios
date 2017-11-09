@@ -14,6 +14,8 @@ enum APIEndPoints: String {
     case getHomeOffers = "/home"
     case getMobiles = "/mobile"
     case getMobileAccessories = "/mobile-accessories"
+    case getWarrantyCheck = "/check-warranty?"
+    case contactUs = "/node"
     
     func getURL() -> String {
         
@@ -31,6 +33,12 @@ enum APIEndPoints: String {
         case .getMobileAccessories:
             return APIEndPoints.rajaApi.rawValue + self.rawValue
          
+        case .getWarrantyCheck:
+            return APIEndPoints.rajaApi.rawValue + self.rawValue
+            
+        case .contactUs:
+            return APIEndPoints.rajaApi.rawValue + self.rawValue
+            
         }
         
     }
@@ -39,11 +47,31 @@ enum APIEndPoints: String {
         
         if let _ = token {
             
-            return ["Authorization" : "Basic c3VwZXJoZXJvOmNoYW5nZU1lIVNEUlRIR0pHSEdGRFNGR2g=", "Content-Type": "application/json"]
+            return ["Authorization" : "Basic YXBwdXNlcjpSam5vdUAyMDE3=", "Content-Type": "application/json"]
             
         }
         
         return ["Content-Type": "application/json"]
+    }
+    
+    static func contactUsHeaders() -> [String : String] {
+        
+        let username = "appuser"
+        let password = "Rjnou@2017"
+        let loginString = String(format: "%@:%@", username, password)
+        let loginData = loginString.data(using: String.Encoding.utf8)!
+        let base64LoginString = loginData.base64EncodedString()
+        
+        let headers = ["Authorization": "Basic \(base64LoginString)", "Content-Type": "application/x-www-form-urlencoded"]
+        
+        return headers
+        
+    }
+    
+    static func getWarrantyCheckParameters(IMEICode: String) -> String {
+        
+        return "field_imei_2_value=\(IMEICode)&field_device_imei_number_value=\(IMEICode)"
+        
     }
     
 }

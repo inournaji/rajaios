@@ -146,6 +146,49 @@ class Connection {
         
     }
     
+    class func contactUsRequest(name: String, mobileNumber: String, message: String, delegate: contactUsConnectionDelegate? = nil) -> DataRequest {
+        
+        let parameters = [ "title":name,
+            "body[und][0][value]":message,
+            "type":"contact",
+            "field_mobile[und][0][value]":mobileNumber]
+     
+        let contactUsHeaders = APIEndPoints.contactUsHeaders()
+        
+        let contactUsRequest = APIEndPoints.contactUs.getURL()
+        
+        return Alamofire.request(contactUsRequest, method: .post, parameters: parameters, headers: contactUsHeaders).validate().responseJSON { (response) in
+            
+            switch response.result {
+                
+            case .failure:
+                
+                print("error in contact us")
+                
+                delegate?.contactUsFailure()
+                
+            case .success(let anyobjectResponse):
+                
+                let jsonObject = JSON(anyobjectResponse)
+                
+                let contactUS = ContactUs(json: jsonObject)
+                
+                if let _ = contactUS.nid {
+                
+                    delegate?.contactUsSuccess()
+                    
+                } else {
+                    
+                    delegate?.contactUsFailure()
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
 }
 
 

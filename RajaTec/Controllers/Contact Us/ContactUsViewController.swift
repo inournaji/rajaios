@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
+import Alamofire
 
 class ContactUsViewController: UIViewController {
 
@@ -23,10 +25,14 @@ class ContactUsViewController: UIViewController {
     @IBOutlet weak var messageUnderLineView: UIView!
     @IBOutlet weak var messageErrorLabel: UILabel!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var loaderFadeView: UIView!
+    @IBOutlet weak var loaderView: UIView!
     
     //MARK: - Variables
     var fadeView: UIView = UIView()
     var currentMenuX:CGFloat = 0
+    var contactRequestLoader: NVActivityIndicatorView?
+    var contactUsRequest: DataRequest?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +53,57 @@ class ContactUsViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.congifureActivityIndicatorView()
+        
+    }
+    
+    func congifureActivityIndicatorView() {
+        
+        let activityFrame = CGRect(x: 0, y: 0, width: loaderView.frame.width, height: loaderView.frame.height)
+        
+        contactRequestLoader = NVActivityIndicatorView(frame: activityFrame, type: .ballSpinFadeLoader, color: RajaColors.headerRedColor.getColor(), padding: nil)
+        
+        NVActivityIndicatorView.DEFAULT_BLOCKER_SIZE = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        
+        NVActivityIndicatorView.DEFAULT_BLOCKER_BACKGROUND_COLOR = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        
+        loaderView.addSubview(contactRequestLoader!)
+                
+    }
+    
+    func handleContactRequestLoader(show: Bool) {
+        
+        if show {
+            
+            self.loaderFadeView.isHidden = false
+            
+            self.loaderView.isHidden = false
+            
+            self.contactRequestLoader?.startAnimating()
+            
+            UIView.animate(withDuration: 1) {
+                
+                self.loaderFadeView.alpha = 0.9
+                
+            }
+            
+        } else {
+            
+            self.contactRequestLoader?.stopAnimating()
+            
+            self.loaderFadeView.isHidden = true
+            
+            self.loaderView.isHidden = true
+            
+            self.loaderFadeView.alpha = 0
+            
+        }
+        
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)
@@ -56,6 +113,18 @@ class ContactUsViewController: UIViewController {
     @IBAction func sumbitAction(_ sender: Any) {
         
         self.view.endEditing(true)
+        
+        if self.messageErrorLabel.text!.isEmpty && self.mobileErrorLabel.text!.isEmpty && self.nameErrorLabel.text!.isEmpty {
+            
+            if let name = self.nameTextField.text, let mobileText = self.mobileTextField.text, let messageText = self.messageTextField.text {
+                
+                self.handleContactRequestLoader(show: true)
+                
+                self.contactUsRequest = Connection.contactUsRequest(name: name, mobileNumber: mobileText, message: messageText, delegate: self)
+                
+            }
+            
+        }
         
     }
     
@@ -78,6 +147,12 @@ extension ContactUsViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        validateForm()
+     
+    }
+    
+    func validateForm() {
         
         if let nameText = self.nameTextField.text, nameText.isEmpty {
             
@@ -106,16 +181,16 @@ extension ContactUsViewController: UITextFieldDelegate {
                 self.mobileErrorLabel.text = NSLocalizedString("Mobile cannot be less than 10 characters", comment: "")
                 
             } else {
-            
+                
                 self.mobileUnderLineView.backgroundColor = UIColor.lightGray
-            
+                
                 self.mobileErrorLabel.text = ""
-            
+                
             }
             
         }
         if let messageText = self.messageTextField.text {
-
+            
             self.messageUnderLineView.backgroundColor = RajaColors.headerRedColor.getColor()
             
             if messageText.isEmpty {
@@ -254,9 +329,69 @@ extension ContactUsViewController : SWRevealViewControllerDelegate {
         }
     }
     
+    func revealController(_ revealController: SWRevealViewController!, willAdd viewController: UIViewController!, for operation: SWRevealControllerOperation, animated: Bool) {
+        
+        self.contactUsRequest?.cancel()
+        
+    }
+    
     func revealControllerPanGestureShouldBegin(_ revealController: SWRevealViewController!) -> Bool {
         
         return true
+    }
+    
+}
+
+extension ContactUsViewController: contactUsConnectionDelegate {
+    
+    func contactUsFailure() {
+        
+        self.handleContactRequestLoader(show: false)
+        
+        let alertPopup = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("There was an error in connection", comment: ""), preferredStyle: .alert)
+        
+        let retryAction = UIAlertAction(title: NSLocalizedString("Retry", comment: ""), style: .default) { (action) in
+            
+            if let name = self.nameTextField.text, let mobileText = self.mobileTextField.text, let messageText = self.messageTextField.text {
+                
+                self.handleContactRequestLoader(show: true)
+                
+                self.contactUsRequest = Connection.contactUsRequest(name: name, mobileNumber: mobileText, message: messageText, delegate: self)
+                
+            }
+            
+        }
+        
+        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
+        
+        alertPopup.addAction(retryAction)
+        
+        alertPopup.addAction(cancelAction)
+        
+        self.present(alertPopup, animated: true, completion: nil)
+        
+    }
+    
+    func contactUsSuccess() {
+        
+        self.handleContactRequestLoader(show: false)
+        
+        let alertPopup = UIAlertController(title: NSLocalizedString("Success", comment: ""), message: NSLocalizedString("Thank you for your message", comment: ""), preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { (action) in
+            
+            if let revealVC = self.revealViewController() {
+                
+                revealVC.setFront(HomeDashboardViewController.getInstance(with: .main), animated: true)
+                
+            }
+            
+        }
+        
+        alertPopup.addAction(okAction)
+        
+        self.present(alertPopup, animated: true, completion: nil)
+        
     }
     
 }

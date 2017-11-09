@@ -28,3 +28,10 @@ protocol getAccessoriesConnectionDelegate {
     func getAccessoriesFailure()
     
 }
+
+protocol contactUsConnectionDelegate {
+    
+    func contactUsSuccess()
+    func contactUsFailure()
+    
+}
