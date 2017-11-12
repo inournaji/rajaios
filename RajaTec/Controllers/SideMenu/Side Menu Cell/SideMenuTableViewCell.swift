@@ -152,11 +152,9 @@ class SideMenuTableViewCell: UITableViewCell {
         
         if let englishButton = sender as? UIButton {
             
-            if !UserDefaults().bool(forKey: SplashViewController.userLanguageKey) {
+            if BundleLocalization.sharedInstance().language == "ar" {
                 
                 self.languageSelection(buttonPressed: englishButton)
-                
-                BundleLocalization.sharedInstance().language = "en"
                 
             }
             
@@ -168,11 +166,11 @@ class SideMenuTableViewCell: UITableViewCell {
     
         if let arabicButton = sender as? UIButton {
             
-            if UserDefaults().bool(forKey: SplashViewController.userLanguageKey) {
+            if BundleLocalization.sharedInstance().language == "en" {
                                 
                 self.languageSelection(buttonPressed: arabicButton)
                 
-                BundleLocalization.sharedInstance().language = "ar"
+                
                 
             }
             

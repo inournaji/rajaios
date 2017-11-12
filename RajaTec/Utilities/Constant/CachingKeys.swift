@@ -14,5 +14,6 @@ enum CachingKeys:  String {
     case cacheOffers = "cacheOffers"
     case cacheMobiles = "cacheMobiles"
     case cacheAccessories = "cacheAccessories"
+    case cacheNotificationOffers = "cacheNotificationOffers"
     
 }

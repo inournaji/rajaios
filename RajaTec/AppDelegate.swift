@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import OneSignal
+import SwiftEventBus
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,27 +18,84 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        if let englishLanguageFlag = UserDefaults().value(forKey: SplashViewController.userLanguageKey) as? Bool {
-            
-            if englishLanguageFlag {
-                
-                BundleLocalization.sharedInstance().language = "en"
-                
-            } else {
-                
-                BundleLocalization.sharedInstance().language = "ar"
-                
-            }
-            
-        } else {
+        
+        self.handleLanguage()
+        
+        self.configureOneSignal(launchOptions: launchOptions)
+        
+        return true
+        
+    }
+    
+    func handleLanguage() {
+        
+        let languageFlag = UserDefaults().integer(forKey: "LanguageFlag")
+        
+        if languageFlag == 0  || languageFlag == 1 {
             
             BundleLocalization.sharedInstance().language = "en"
             
+        } else if languageFlag == 2 {
+            
+            BundleLocalization.sharedInstance().language = "ar"
+            
         }
         
-        return true
     }
-
+    
+    func configureOneSignal(launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
+        
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+        
+        // Replace 'YOUR_APP_ID' with your OneSignal App ID.
+        OneSignal.initWithLaunchOptions(launchOptions,
+                                        appId: "bafc3beb-a6d9-455c-a2bf-7b9219ed5fd7",
+                                        handleNotificationAction: nil,
+                                        settings: onesignalInitSettings)
+        
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.none
+        
+        // Recommend moving the below line to prompt for push after informing the user about
+        //   how your app will use them.
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
+        
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data -> String in
+            return String(format: "%02.2hhx", data)
+        }
+        
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
+    }
+    
+    func application(_ application: UIApplication,
+                     didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register: \(error)")
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        if UIApplication.shared.applicationState == .active {
+        
+            OneSignalModel.handleOneSignalNotification(userInfo: userInfo)
+            
+            OneSignalModel.showAlertViewMessage()
+            
+        } else {
+            
+            OneSignalModel.handleOneSignalNotificationWhenAppKilled(userInfo: userInfo)
+            
+            SwiftEventBus.post(Events.goToOfferScreen.rawValue)
+            
+        }
+        
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

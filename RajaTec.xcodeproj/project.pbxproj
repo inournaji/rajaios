@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492DF4F11FB803AB00FA3A97 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492DF4F01FB803AB00FA3A97 /* Events.swift */; };
+		492DF4F41FB805BE00FA3A97 /* UIApplicationExtenssion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492DF4F31FB805BE00FA3A97 /* UIApplicationExtenssion.swift */; };
 		492E8DF61FAE761800AE978E /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */; };
 		492E8DFA1FAE7F2900AE978E /* WarrantyCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */; };
 		494C72411FB3C3270095EA56 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C72401FB3C27C0095EA56 /* ContactUs.swift */; };
@@ -44,6 +46,12 @@
 		49659B381FA0F0CC00543D1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49659B361FA0F0CC00543D1C /* LaunchScreen.storyboard */; };
 		498CAB311FB7E22A0052F250 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CAB301FB7E22A0052F250 /* NotificationService.swift */; };
 		498CAB351FB7E22A0052F250 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 498CAB2E1FB7E22A0052F250 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		498CAB3E1FB7E9050052F250 /* OneSignalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CAB3D1FB7E9050052F250 /* OneSignalModel.swift */; };
+		498CAB401FB7EA650052F250 /* OfferNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CAB3F1FB7EA650052F250 /* OfferNotification.swift */; };
+		498CAB421FB7EC9D0052F250 /* NotificationOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CAB411FB7EC9D0052F250 /* NotificationOffers.swift */; };
+		498CAB451FB7EE720052F250 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CAB441FB7EE720052F250 /* OffersViewController.swift */; };
+		498CAB491FB7EE9D0052F250 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CAB471FB7EE9D0052F250 /* OfferTableViewCell.swift */; };
+		498CAB4A1FB7EE9D0052F250 /* OfferTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498CAB481FB7EE9D0052F250 /* OfferTableViewCell.xib */; };
 		49924B471FAE9B510035B774 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49924B461FAE9B510035B774 /* SearchViewController.swift */; };
 		49924B4A1FAE9E8E0035B774 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49924B491FAE9E8E0035B774 /* UIImageExtension.swift */; };
 		49924B4E1FAEB74D0035B774 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49924B4D1FAEB74D0035B774 /* ContactUsViewController.swift */; };
@@ -88,6 +96,8 @@
 /* Begin PBXFileReference section */
 		03EB8DA68593FC5F8ACE4FC5 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		45C7BBBE55628623B4119B74 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		492DF4F01FB803AB00FA3A97 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		492DF4F31FB805BE00FA3A97 /* UIApplicationExtenssion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtenssion.swift; sourceTree = "<group>"; };
 		492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyCheckViewController.swift; sourceTree = "<group>"; };
 		494C72401FB3C27C0095EA56 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
@@ -128,6 +138,13 @@
 		498CAB2E1FB7E22A0052F250 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		498CAB301FB7E22A0052F250 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		498CAB321FB7E22A0052F250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		498CAB3B1FB7E61F0052F250 /* RajaTec.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RajaTec.entitlements; sourceTree = "<group>"; };
+		498CAB3D1FB7E9050052F250 /* OneSignalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSignalModel.swift; sourceTree = "<group>"; };
+		498CAB3F1FB7EA650052F250 /* OfferNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferNotification.swift; sourceTree = "<group>"; };
+		498CAB411FB7EC9D0052F250 /* NotificationOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationOffers.swift; sourceTree = "<group>"; };
+		498CAB441FB7EE720052F250 /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		498CAB471FB7EE9D0052F250 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
+		498CAB481FB7EE9D0052F250 /* OfferTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfferTableViewCell.xib; sourceTree = "<group>"; };
 		49924B461FAE9B510035B774 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		49924B491FAE9E8E0035B774 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		49924B4D1FAEB74D0035B774 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +267,7 @@
 		4964615C1FA0F8540004F1BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				498CAB431FB7EE600052F250 /* Offers */,
 				49E811A51FB018AB00789656 /* Splash */,
 				49924B4C1FAEB7350035B774 /* Contact Us */,
 				49924B451FAE9B3E0035B774 /* Search */,
@@ -398,6 +416,7 @@
 		49659B2C1FA0F0CC00543D1C /* RajaTec */ = {
 			isa = PBXGroup;
 			children = (
+				498CAB3B1FB7E61F0052F250 /* RajaTec.entitlements */,
 				49A2DFCD1FA1066700DC2C2A /* SWRevealViewController */,
 				49659B421FA0F18200543D1C /* Utilities */,
 				49659B411FA0F17500543D1C /* Connection */,
@@ -423,6 +442,7 @@
 		49659B401FA0F16E00543D1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				498CAB3C1FB7E8F00052F250 /* OneSignal Notification */,
 				494C723F1FB3C1FD0095EA56 /* Contact us */,
 				496461551FA0F7B20004F1BD /* Accessories */,
 				496461541FA0F7AC0004F1BD /* Mobiles */,
@@ -456,6 +476,7 @@
 			isa = PBXGroup;
 			children = (
 				49659B491FA0F20600543D1C /* CachingKeys.swift */,
+				492DF4F01FB803AB00FA3A97 /* Events.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -465,6 +486,7 @@
 			children = (
 				49659B481FA0F1F800543D1C /* UIViewExtension.swift */,
 				49924B491FAE9E8E0035B774 /* UIImageExtension.swift */,
+				492DF4F31FB805BE00FA3A97 /* UIApplicationExtenssion.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -492,6 +514,34 @@
 				498CAB321FB7E22A0052F250 /* Info.plist */,
 			);
 			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		498CAB3C1FB7E8F00052F250 /* OneSignal Notification */ = {
+			isa = PBXGroup;
+			children = (
+				498CAB3D1FB7E9050052F250 /* OneSignalModel.swift */,
+				498CAB3F1FB7EA650052F250 /* OfferNotification.swift */,
+				498CAB411FB7EC9D0052F250 /* NotificationOffers.swift */,
+			);
+			path = "OneSignal Notification";
+			sourceTree = "<group>";
+		};
+		498CAB431FB7EE600052F250 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				498CAB461FB7EE800052F250 /* Offer Cell */,
+				498CAB441FB7EE720052F250 /* OffersViewController.swift */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		498CAB461FB7EE800052F250 /* Offer Cell */ = {
+			isa = PBXGroup;
+			children = (
+				498CAB471FB7EE9D0052F250 /* OfferTableViewCell.swift */,
+				498CAB481FB7EE9D0052F250 /* OfferTableViewCell.xib */,
+			);
+			path = "Offer Cell";
 			sourceTree = "<group>";
 		};
 		49924B451FAE9B3E0035B774 /* Search */ = {
@@ -608,6 +658,14 @@
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					498CAB2D1FB7E22A0052F250 = {
 						CreatedOnToolsVersion = 9.0;
@@ -644,6 +702,7 @@
 				49E3074A1FB3EE3C006EEB0E /* Localizable.strings in Resources */,
 				494C724B1FB3D76C0095EA56 /* ExpandTableViewCell.xib in Resources */,
 				494C724E1FB3D76F0095EA56 /* SideMenuTableViewCell.xib in Resources */,
+				498CAB4A1FB7EE9D0052F250 /* OfferTableViewCell.xib in Resources */,
 				494C72541FB3D77C0095EA56 /* MobileDetailTableViewCell.xib in Resources */,
 				49659B381FA0F0CC00543D1C /* LaunchScreen.storyboard in Resources */,
 				494C72571FB3D7800095EA56 /* MobileGallaryCollectionViewCell.xib in Resources */,
@@ -771,9 +830,13 @@
 				49A2DFD71FA107F600DC2C2A /* SWRevealViewController.h in Sources */,
 				49A2DFD81FA107F600DC2C2A /* SWRevealViewController.m in Sources */,
 				49A2DFD91FA107F600DC2C2A /* RajaTec-Bridging-Header.h in Sources */,
+				492DF4F11FB803AB00FA3A97 /* Events.swift in Sources */,
 				49E811A71FB018C000789656 /* SplashViewController.swift in Sources */,
+				492DF4F41FB805BE00FA3A97 /* UIApplicationExtenssion.swift in Sources */,
 				49A2DFD41FA107B000DC2C2A /* APIEndPoints.swift in Sources */,
+				498CAB491FB7EE9D0052F250 /* OfferTableViewCell.swift in Sources */,
 				49E307431FB3E047006EEB0E /* BundleLocalization.m in Sources */,
+				498CAB421FB7EC9D0052F250 /* NotificationOffers.swift in Sources */,
 				49A2DFD51FA107B000DC2C2A /* Connection.swift in Sources */,
 				49A2DFD61FA107B000DC2C2A /* ConnectionDelegates.swift in Sources */,
 				4964619E1FA100C70004F1BD /* BottomBarCollectionViewCell.swift in Sources */,
@@ -782,6 +845,8 @@
 				492E8DF61FAE761800AE978E /* TermsConditionsViewController.swift in Sources */,
 				496461981FA1006F0004F1BD /* ExpandTableViewCell.swift in Sources */,
 				496461781FA0FA6F0004F1BD /* Accessories.swift in Sources */,
+				498CAB401FB7EA650052F250 /* OfferNotification.swift in Sources */,
+				498CAB451FB7EE720052F250 /* OffersViewController.swift in Sources */,
 				496461791FA0FA6F0004F1BD /* Accessory.swift in Sources */,
 				4964617A1FA0FA6F0004F1BD /* Mobile.swift in Sources */,
 				4964617B1FA0FA6F0004F1BD /* Mobiles.swift in Sources */,
@@ -803,6 +868,7 @@
 				496461971FA100200004F1BD /* SideMenuViewController.swift in Sources */,
 				496461A01FA100ED0004F1BD /* HomeDashboardViewController.swift in Sources */,
 				4964616C1FA0F9690004F1BD /* MobileDetailViewController.swift in Sources */,
+				498CAB3E1FB7E9050052F250 /* OneSignalModel.swift in Sources */,
 				49924B4E1FAEB74D0035B774 /* ContactUsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1043,6 +1109,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RajaTec/RajaTec.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Marwa Nassan (438375SD5P)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1068,6 +1135,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RajaTec/RajaTec.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Marwa Nassan (3X7C266U4E)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;

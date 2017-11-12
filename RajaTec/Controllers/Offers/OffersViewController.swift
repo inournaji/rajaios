@@ -1,48 +1,69 @@
 //
-//  WarrantyCheckViewController.swift
+//  OffersViewController.swift
 //  RajaTec
 //
-//  Created by Ammar Arangy on 11/5/17.
+//  Created by Ammar Arangy on 11/12/17.
 //  Copyright © 2017 RajaTec. All rights reserved.
 //
 
 import UIKit
+import SwiftEventBus
 
-class WarrantyCheckViewController: UIViewController {
+class OffersViewController: UIViewController {
 
     //MARK: - Outlets
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
-    @IBOutlet weak var warrantyTextField: UITextField!
-    @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
-    @IBOutlet weak var underLineView: UIView!
+    @IBOutlet weak var tableView: UITableView!
     
     //MARK: - Variables
     var fadeView: UIView = UIView()
     var currentMenuX:CGFloat = 0
+    var offersNotifications = NotificationOffers.getOffers()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.searchButton.tintColor = RajaColors.headerRedColor.getColor()
+        
+        self.menuButton.tintColor = RajaColors.headerRedColor.getColor()
+        
+        self.tableView.register(UINib(nibName: "OfferTableViewCell", bundle: nil), forCellReuseIdentifier: "OfferTableViewCellID")
+        
+        self.tableView.delegate = self
+        
+        self.tableView.dataSource = self
+        
+        self.tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        
+        self.tableView.tableFooterView = UIView()
         
         self.configureRevealMenu()
         
         self.setMenuFadeView()
         
-        self.searchButton.tintColor = RajaColors.headerRedColor.getColor()
-        
-        self.menuButton.tintColor = RajaColors.headerRedColor.getColor()
-        
-        self.initToolbar()
-        
-        self.warrantyTextField.delegate = self
+        self.errorLabel.isHidden = offersNotifications.count > 0 ? true : false
         
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.warrantyTextField.becomeFirstResponder()
+        SwiftEventBus.onMainThread(self, name: Events.NewOfferRecieved.rawValue) { (notification) in
+            
+            self.offersNotifications = NotificationOffers.getOffers()
+            
+            self.tableView.reloadData()
+            
+        }
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        SwiftEventBus.unregister(self)
         
     }
     
@@ -52,21 +73,36 @@ class WarrantyCheckViewController: UIViewController {
         
     }
     
-    @IBAction func checkWarrantyAction(_ sender: Any) {
+
+}
+
+extension OffersViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        self.view.endEditing(true)
+        return offersNotifications.count > 0 ? offersNotifications.count : 0
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        self.view.endEditing(true)
+        let offerCell = self.tableView.dequeueReusableCell(withIdentifier: "OfferTableViewCellID", for: indexPath) as! OfferTableViewCell
+        
+        offerCell.configureCell(offer: offersNotifications[indexPath.row])
+        
+        return offerCell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return UITableViewAutomaticDimension
         
     }
     
 }
 
-extension WarrantyCheckViewController : SWRevealViewControllerDelegate {
+extension OffersViewController : SWRevealViewControllerDelegate {
     
     //MARK: Menu Functions
     func configureRevealMenu() {
@@ -79,7 +115,7 @@ extension WarrantyCheckViewController : SWRevealViewControllerDelegate {
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-            self.revealViewController().panGestureRecognizer().addTarget(self, action: #selector(WarrantyCheckViewController.handlePanGesture(panGesture:)))
+            self.revealViewController().panGestureRecognizer().addTarget(self, action: #selector(OffersViewController.handlePanGesture(panGesture:)))
             
         }
         
@@ -163,75 +199,14 @@ extension WarrantyCheckViewController : SWRevealViewControllerDelegate {
     
 }
 
-
-extension WarrantyCheckViewController: UITextFieldDelegate {
+extension OffersViewController {
     
-    func initToolbar() {
+    static public func getInstance() -> OffersViewController {
         
-        //init toolbar
-        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
-        //create left side empty space so that done button set on right side
-        let flexSpace = UIBarButtonItem(barButtonSystemItem:    .flexibleSpace, target: nil, action: nil)
+        let offersViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OffersViewControllerID") as? OffersViewController
         
-        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
-        
-        toolbar.setItems([flexSpace, doneBtn], animated: false)
-        
-        toolbar.sizeToFit()
-        
-        //setting toolbar as inputAccessoryView
-        self.warrantyTextField.inputAccessoryView = toolbar
-        
-    }
-    @objc func doneButtonAction() {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        self.view.endEditing(true)
-        
-        return true
-        
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        if let enteredText = textField.text {
-            
-            if enteredText.isEmpty || enteredText.characters.count < 10 {
-                
-                self.initErrorMessage(with: NSLocalizedString("Please enter IMEI code", comment: ""))
-                
-            } else {
-                
-                self.initErrorMessage(with: "")
-                
-            }
-            
-        }
-        
-    }
-    
-    func initErrorMessage(with message: String) {
-        
-        self.underLineView.backgroundColor = message.isEmpty ? UIColor.lightGray : RajaColors.headerRedColor.getColor()
-            
-        self.errorLabel.text = message
-            
-    }
-    
-}
-
-extension WarrantyCheckViewController {
-    
-    static public func getInstance() -> WarrantyCheckViewController {
-        
-        let warrantyCheckViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WarrantyCheckViewControllerID") as? WarrantyCheckViewController
-        
-        return warrantyCheckViewController!
+        return offersViewController!
         
     }
     
 }
-

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftEventBus
 
 enum BottomBarItem : String{
     case main
@@ -99,7 +100,47 @@ class HomeDashboardViewController: UIViewController {
         self.searchButton.tintColor = RajaColors.headerRedColor.getColor()
         
         self.menuButton.tintColor = RajaColors.headerRedColor.getColor()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UserDefaults().bool(forKey: "showNotificationAlert") {
+            
+            UserDefaults().set(false, forKey: "showNotificationAlert")
+            
+            if let revealMenu = self.revealViewController() {
                 
+                revealMenu.setFront(OffersViewController.getInstance(), animated: true)
+                
+            }
+            
+        }
+        
+        SwiftEventBus.onMainThread(self, name: Events.goToOfferScreen.rawValue) { (notification) in
+
+            if UserDefaults().bool(forKey: "showNotificationAlert") {
+
+                UserDefaults().set(false, forKey: "showNotificationAlert")
+
+            }
+
+            if let revealMenu = self.revealViewController() {
+
+                revealMenu.setFront(OffersViewController.getInstance(), animated: true)
+
+            }
+
+        }
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        SwiftEventBus.unregister(self)
+        
     }
     
     @IBAction func searchAction(_ sender: Any) {

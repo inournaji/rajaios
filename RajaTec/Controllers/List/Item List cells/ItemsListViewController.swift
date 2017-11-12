@@ -110,6 +110,8 @@ class ItemsListViewController: UIViewController {
         
         if Offers.existingOffers {
             
+            self.handleActivityIndicator(animate: false)
+            
             self.homeDataSource = Offers.getOffers()
             
         } else {
@@ -126,6 +128,8 @@ class ItemsListViewController: UIViewController {
         
         if Mobiles.existingMobiles {
             
+            self.handleActivityIndicator(animate: false)
+            
             self.mobileDataSource = Mobiles.getMobiles()
             
         } else {
@@ -141,6 +145,8 @@ class ItemsListViewController: UIViewController {
     func getAccessories() {
         
         if Accessories.existingAccessories {
+            
+            self.handleActivityIndicator(animate: false)
             
             self.accessoriesDataSource = Accessories.getAccessories()
             

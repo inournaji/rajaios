@@ -162,6 +162,11 @@ class SideMenuViewController: UIViewController {
         
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -234,7 +239,15 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
             }
             
         case .offers:
-            break
+            
+            if let revealMenu = self.revealViewController() {
+                
+                revealMenu.revealToggle(animated: true)
+                
+                revealMenu.setFront(OffersViewController.getInstance(), animated: true)
+                
+            }
+            
             
         case .contactUS:
             if let revealMenu = self.revealViewController() {
@@ -281,29 +294,30 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
     //MARK: - Actions
     @IBAction func englishTapAction(_ sender: Any) {
         
-        if !UserDefaults().bool(forKey: SplashViewController.userLanguageKey) {
-            
-            UserDefaults().set(true, forKey: SplashViewController.userLanguageKey)
-            
+        if BundleLocalization.sharedInstance().language == "ar" {
+        
             if let revealVC = self.revealViewController() {
                 
+               UserDefaults().set(1, forKey: "LanguageFlag")
+               
+               BundleLocalization.sharedInstance().language = "en"
                 revealVC.navigationController?.pushViewController(SplashViewController.getInstance(changeLanguage: true), animated: true)
                 
             }
             
         }
         
-        
     }
     
     @IBAction func arabicTapAction(_ sender: Any) {
         
-        if UserDefaults().bool(forKey: SplashViewController.userLanguageKey) {
-            
-            UserDefaults().set(false, forKey: SplashViewController.userLanguageKey)
+        if BundleLocalization.sharedInstance().language == "en" {
             
             if let revealVC = self.revealViewController() {
                 
+                UserDefaults().set(2, forKey: "LanguageFlag")
+               
+               BundleLocalization.sharedInstance().language = "ar"
                 revealVC.navigationController?.pushViewController(SplashViewController.getInstance(changeLanguage: true), animated: true)
                 
             }

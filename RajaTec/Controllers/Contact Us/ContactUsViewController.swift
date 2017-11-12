@@ -252,7 +252,7 @@ extension ContactUsViewController : SWRevealViewControllerDelegate {
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-            self.revealViewController().panGestureRecognizer().addTarget(self, action: #selector(TermsConditionsViewController.handlePanGesture(panGesture:)))
+            self.revealViewController().panGestureRecognizer().addTarget(self, action: #selector(ContactUsViewController.handlePanGesture(panGesture:)))
             
         }
         
