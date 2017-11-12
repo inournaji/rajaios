@@ -30,9 +30,9 @@ enum ListType {
             
         case .mobile, .accessories:
             
-            let homeWidth = screenWidth / 2
+            let homeWidth = screenWidth / 2 - 20
             
-            let homeHeight = homeWidth * 1.5
+            let homeHeight = homeWidth * 1.4
             
             return CGSize(width: homeWidth, height: homeHeight)
             

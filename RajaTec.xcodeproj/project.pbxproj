@@ -42,6 +42,8 @@
 		49659B331FA0F0CC00543D1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49659B311FA0F0CC00543D1C /* Main.storyboard */; };
 		49659B351FA0F0CC00543D1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49659B341FA0F0CC00543D1C /* Assets.xcassets */; };
 		49659B381FA0F0CC00543D1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49659B361FA0F0CC00543D1C /* LaunchScreen.storyboard */; };
+		498CAB311FB7E22A0052F250 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CAB301FB7E22A0052F250 /* NotificationService.swift */; };
+		498CAB351FB7E22A0052F250 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 498CAB2E1FB7E22A0052F250 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		49924B471FAE9B510035B774 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49924B461FAE9B510035B774 /* SearchViewController.swift */; };
 		49924B4A1FAE9E8E0035B774 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49924B491FAE9E8E0035B774 /* UIImageExtension.swift */; };
 		49924B4E1FAEB74D0035B774 /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49924B4D1FAEB74D0035B774 /* ContactUsViewController.swift */; };
@@ -56,9 +58,36 @@
 		49E3074A1FB3EE3C006EEB0E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49E307481FB3EE3B006EEB0E /* Localizable.strings */; };
 		49E811A71FB018C000789656 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E811A61FB018C000789656 /* SplashViewController.swift */; };
 		9A5B93211139DE01B446F8F2 /* Pods_RajaTec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */; };
+		A57BF35E68CEBD6B7A61B053 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C7BBBE55628623B4119B74 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		498CAB331FB7E22A0052F250 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49659B221FA0F0CC00543D1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 498CAB2D1FB7E22A0052F250;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		498CAB391FB7E22A0052F250 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				498CAB351FB7E22A0052F250 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		03EB8DA68593FC5F8ACE4FC5 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		45C7BBBE55628623B4119B74 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyCheckViewController.swift; sourceTree = "<group>"; };
 		494C72401FB3C27C0095EA56 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
@@ -96,6 +125,9 @@
 		49659B471FA0F1E700543D1C /* RajaColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RajaColours.swift; sourceTree = "<group>"; };
 		49659B481FA0F1F800543D1C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		49659B491FA0F20600543D1C /* CachingKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingKeys.swift; sourceTree = "<group>"; };
+		498CAB2E1FB7E22A0052F250 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		498CAB301FB7E22A0052F250 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		498CAB321FB7E22A0052F250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49924B461FAE9B510035B774 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		49924B491FAE9E8E0035B774 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		49924B4D1FAEB74D0035B774 /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +162,7 @@
 		49E307641FB3EEB5006EEB0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = RajaTec/ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		49E811A61FB018C000789656 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RajaTec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6186451E24201C36556C31DC /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		71AB50DC14361F5B77663AAE /* Pods-RajaTec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RajaTec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec.debug.xcconfig"; sourceTree = "<group>"; };
 		D55DE94639F4F6696EC32BAC /* Pods-RajaTec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RajaTec.release.xcconfig"; path = "Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +176,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		498CAB2B1FB7E22A0052F250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A57BF35E68CEBD6B7A61B053 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -150,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				5E5A518C13163D8912EC8452 /* Pods_RajaTec.framework */,
+				45C7BBBE55628623B4119B74 /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -337,6 +379,7 @@
 			children = (
 				49E307481FB3EE3B006EEB0E /* Localizable.strings */,
 				49659B2C1FA0F0CC00543D1C /* RajaTec */,
+				498CAB2F1FB7E22A0052F250 /* OneSignalNotificationServiceExtension */,
 				49659B2B1FA0F0CC00543D1C /* Products */,
 				7749B3467290325264383D00 /* Pods */,
 				1949B54AE210505B8BCC879E /* Frameworks */,
@@ -347,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				49659B2A1FA0F0CC00543D1C /* RajaTec.app */,
+				498CAB2E1FB7E22A0052F250 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -441,6 +485,15 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		498CAB2F1FB7E22A0052F250 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				498CAB301FB7E22A0052F250 /* NotificationService.swift */,
+				498CAB321FB7E22A0052F250 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		49924B451FAE9B3E0035B774 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +544,8 @@
 			children = (
 				71AB50DC14361F5B77663AAE /* Pods-RajaTec.debug.xcconfig */,
 				D55DE94639F4F6696EC32BAC /* Pods-RajaTec.release.xcconfig */,
+				6186451E24201C36556C31DC /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				03EB8DA68593FC5F8ACE4FC5 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -508,15 +563,36 @@
 				49659B281FA0F0CC00543D1C /* Resources */,
 				065EFF1E516246AEA064D2C4 /* [CP] Embed Pods Frameworks */,
 				15FB66F0F8A9D1871337A0B7 /* [CP] Copy Pods Resources */,
+				498CAB391FB7E22A0052F250 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				498CAB341FB7E22A0052F250 /* PBXTargetDependency */,
 			);
 			name = RajaTec;
 			productName = RajaTec;
 			productReference = 49659B2A1FA0F0CC00543D1C /* RajaTec.app */;
 			productType = "com.apple.product-type.application";
+		};
+		498CAB2D1FB7E22A0052F250 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 498CAB361FB7E22A0052F250 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				BC62D12FAA9624FBD4B82FD0 /* [CP] Check Pods Manifest.lock */,
+				498CAB2A1FB7E22A0052F250 /* Sources */,
+				498CAB2B1FB7E22A0052F250 /* Frameworks */,
+				498CAB2C1FB7E22A0052F250 /* Resources */,
+				0FC4E2DF4874712958032B8D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = 498CAB2E1FB7E22A0052F250 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -531,6 +607,10 @@
 					49659B291FA0F0CC00543D1C = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					498CAB2D1FB7E22A0052F250 = {
+						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -550,6 +630,7 @@
 			projectRoot = "";
 			targets = (
 				49659B291FA0F0CC00543D1C /* RajaTec */,
+				498CAB2D1FB7E22A0052F250 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -570,6 +651,13 @@
 				49659B331FA0F0CC00543D1C /* Main.storyboard in Resources */,
 				494C72511FB3D7780095EA56 /* HomeCollectionViewCell.xib in Resources */,
 				494C72451FB3D7550095EA56 /* MobileAccessoriesCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		498CAB2C1FB7E22A0052F250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +694,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RajaTec/Pods-RajaTec-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0FC4E2DF4874712958032B8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		15FB66F0F8A9D1871337A0B7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -633,6 +736,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-RajaTec-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC62D12FAA9624FBD4B82FD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -686,7 +807,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		498CAB2A1FB7E22A0052F250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				498CAB311FB7E22A0052F250 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		498CAB341FB7E22A0052F250 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 498CAB2D1FB7E22A0052F250 /* OneSignalNotificationServiceExtension */;
+			targetProxy = 498CAB331FB7E22A0052F250 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		494C72471FB3D7550095EA56 /* MobileAccessoriesCollectionViewCell.xib */ = {
@@ -903,14 +1040,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 71AB50DC14361F5B77663AAE /* Pods-RajaTec.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marwa Nassan (438375SD5P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3X7C266U4E;
 				INFOPLIST_FILE = RajaTec/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RajaTec.RajaTec.RajaTec;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RajaTec.rajatec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RajaTec/SWRevealViewController/RajaTec-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -922,17 +1065,61 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D55DE94639F4F6696EC32BAC /* Pods-RajaTec.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Marwa Nassan (3X7C266U4E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3X7C266U4E;
 				INFOPLIST_FILE = RajaTec/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.RajaTec.RajaTec.RajaTec;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RajaTec.rajatec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RajaTec/SWRevealViewController/RajaTec-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		498CAB371FB7E22A0052F250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6186451E24201C36556C31DC /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Marwa Nassan (438375SD5P)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3X7C266U4E;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RajaTec.rajatec.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		498CAB381FB7E22A0052F250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03EB8DA68593FC5F8ACE4FC5 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Marwa Nassan (3X7C266U4E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3X7C266U4E;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.RajaTec.rajatec.OneSignalNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -953,6 +1140,15 @@
 			buildConfigurations = (
 				49659B3D1FA0F0CC00543D1C /* Debug */,
 				49659B3E1FA0F0CC00543D1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		498CAB361FB7E22A0052F250 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				498CAB371FB7E22A0052F250 /* Debug */,
+				498CAB381FB7E22A0052F250 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -11,6 +11,7 @@ target 'RajaTec' do
     pod 'SwiftyJSON'
     pod 'NVActivityIndicatorView'
     pod 'SwiftEventBus', :tag => '2.2.0', :git => 'https://github.com/cesarferreira/SwiftEventBus.git'
+    pod 'OneSignal', '>= 2.5.2', '< 3.0'
     
     post_install do |installer|
         installer.pods_project.targets.each do |target|
@@ -20,4 +21,8 @@ target 'RajaTec' do
         end
     end
 
+end
+
+target 'OneSignalNotificationServiceExtension' do
+    pod 'OneSignal', '>= 2.5.2', '< 3.0'
 end

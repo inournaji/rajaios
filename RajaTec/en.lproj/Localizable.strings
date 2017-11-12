@@ -1,0 +1,78 @@
+/*
+ Localizable.strings
+ RajaTec
+ 
+ Created by Ammar Arangy on 11/9/17.
+ Copyright © 2017 RajaTec. All rights reserved.
+ */
+
+/* No Localized Strings */
+
+"Brand" = "Brand";
+
+"Camera" = "Camera";
+
+"Screen" = "Screen";
+
+"Ram" = "Ram";
+
+"Storage" = "Storage";
+
+"Battery" = "Battery";
+
+"Price" = "Price";
+
+"Processor" = "Processor";
+
+"Name cannot be empty" = "Name cannot be empty";
+
+"Mobile cannot be empty" = "Mobile cannot be empty";
+
+"Mobile cannot be less than 10 characters" = "Mobile cannot be less than 10 characters";
+
+"Message cannot be empty" = "Message cannot be empty";
+
+"Message cannot be less than 10 characters" = "Message cannot be less than 10 characters";
+
+"Error" = "Error";
+
+"There was an error in connection" = "There was an error in connection";
+
+"Retry" = "Retry";
+
+"Cancel" = "Cancel";
+
+"Success" = "Success";
+
+"Thank you for your message" = "Thank you for your message";
+
+"OK" = "OK";
+
+"Please enter IMEI code" = "Please enter IMEI code";
+
+"Main" = "Main";
+
+"Mobiles" = "Mobiles";
+
+"Accessories" = "Accessories";
+
+"Home" = "Home";
+
+"Gallary" = "Gallary";
+
+"Warranty"  = "Warranty";
+
+"Offers" = "Offers";
+
+"Contact Us" = "Contact Us";
+
+"Terms and Conditions" = "Terms and Conditions";
+
+"Join us on Facebook" = "Join us on Facebook";
+
+"mobiles" = "mobiles";
+
+"accessories" = "accessories";
+
+
+
