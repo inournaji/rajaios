@@ -4,8 +4,6 @@ use_frameworks!
 
 target 'RajaTec' do
 
-    pod 'DateToolsSwift'
-    pod 'IQKeyboardManagerSwift'
     pod 'Alamofire'
     pod 'Kingfisher'
     pod 'SwiftyJSON'

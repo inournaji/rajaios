@@ -13,6 +13,9 @@ class TermsConditionsViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var menuButton: UIButton!
+    @IBOutlet weak var termsConditionWebView: UIWebView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var errorButton: UIButton!
     
     //MARK: - Variables
     var fadeView: UIView = UIView()
@@ -29,11 +32,58 @@ class TermsConditionsViewController: UIViewController {
         
         self.configureRevealMenu()
         
+        self.termsConditionWebView.delegate = self
+        
+        if let url = URL(string: "http://rajatec.net/ar/content/warantypolicy") {
+        
+            self.errorButton.isHidden = true
+            
+            self.activityIndicator.startAnimating()
+            
+            self.termsConditionWebView.loadRequest(URLRequest(url: url))
+            
+        }
+        
     }
+    
+    @IBAction func retryAction(_ sender: Any) {
+        
+        if let url = URL(string: "http://rajatec.net/ar/content/warantypolicy") {
+            
+            self.errorButton.isHidden = true
+            
+            self.activityIndicator.startAnimating()
+            
+            self.termsConditionWebView.loadRequest(URLRequest(url: url))
+            
+        }
+        
+    }
+    
     
     @IBAction func searchAction(_ sender: Any) {
         
         self.present(SearchViewController.getInstance(), animated: true, completion: nil)
+        
+    }
+    
+}
+
+extension TermsConditionsViewController: UIWebViewDelegate {
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        
+        self.activityIndicator.stopAnimating()
+        
+        self.errorButton.isHidden = true
+        
+    }
+    
+    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        
+        self.activityIndicator.stopAnimating()
+        
+        self.errorButton.isHidden = false
         
     }
     

@@ -52,12 +52,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SearchViewController.collectionView(_:numberOfItemsInSection:):SearchViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.searchItems.count">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "OffersViewController.tableView(_:numberOfRowsInSection:):OffersViewController.swift">
       </ContextState>
       <ContextState
          contextName = "OffersViewController.viewDidLoad():OffersViewController.swift">
@@ -76,6 +71,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "SearchViewController.collectionView(_:numberOfItemsInSection:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.searchItems.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "MobileDetailViewController.previousImageAction(_:):MobileDetailViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -87,13 +90,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "OffersViewController.tableView(_:numberOfRowsInSection:):OffersViewController.swift">
-      </ContextState>
-      <ContextState
          contextName = "HomeDashboardViewController.handlePanGesture(panGesture:):HomeDashboardViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.revealViewController()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in static Connection.warrantyActivationRequest(mobileNumber:imei:delegate:):Connection.swift">
+      </ContextState>
+      <ContextState
+         contextName = "String.isPhoneNumber.getter:StringExtension.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "phoneTest.evaluate(with: self)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

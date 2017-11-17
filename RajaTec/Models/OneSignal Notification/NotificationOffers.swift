@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import DateToolsSwift
 import SwiftEventBus
 
 class NotificationOffers {

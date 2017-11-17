@@ -6,43 +6,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RajaTec/Connection/Connection.swift"
-            timestampString = "531878310.948706"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "contactUsRequest(name:mobileNumber:message:delegate:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RajaTec/Connection/Connection.swift"
-            timestampString = "531878310.948821"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "contactUsRequest(name:mobileNumber:message:delegate:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RajaTec/Controllers/SideMenu/Side Menu Cell/SideMenuTableViewCell.swift"
-            timestampString = "532160216.062795"
+            timestampString = "532206717.822282"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "153"
@@ -58,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RajaTec/Controllers/SideMenu/Side Menu Cell/SideMenuTableViewCell.swift"
-            timestampString = "532160216.063441"
+            timestampString = "532206717.822955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "167"
@@ -90,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RajaTec/AppDelegate.swift"
-            timestampString = "532160216.064161"
+            timestampString = "532208746.462893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
@@ -106,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RajaTec/Controllers/Contact Us/ContactUsViewController.swift"
-            timestampString = "532160216.064241"
+            timestampString = "532627723.722065"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
             landmarkName = "handlePanGesture(panGesture:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -137,13 +105,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RajaTec/Controllers/Terms and Conditions/TermsConditionsViewController.swift"
-            timestampString = "532158442.213164"
+            filePath = "RajaTec/Controllers/Warranty Check/WarrantyCheckViewController.swift"
+            timestampString = "532625068.330111"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "configureRevealMenu()"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
+            landmarkName = "warrantyActivationSuccess(warranty:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RajaTec/Controllers/Warranty Check/WarrantyCheckViewController.swift"
+            timestampString = "532625068.333759"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
+            landmarkName = "warrantyActivationFailure(errorMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

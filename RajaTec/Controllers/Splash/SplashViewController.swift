@@ -64,7 +64,7 @@ class SplashViewController: UIViewController {
         
         self.handleActivityIndicator(animate: true)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
         
             self.handleActivityIndicator(animate: false)
             

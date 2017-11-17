@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
+import Alamofire
 
 class WarrantyCheckViewController: UIViewController {
 
@@ -17,10 +19,31 @@ class WarrantyCheckViewController: UIViewController {
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var underLineView: UIView!
+    @IBOutlet weak var mobileTextField: UITextField!
+    @IBOutlet weak var mobileErrorLabel: UILabel!
+    @IBOutlet weak var mobileUnderLineView: UIView!
+    @IBOutlet weak var loaderFadeView: UIView!
+    @IBOutlet weak var loaderView: UIView!
+    
+    @IBOutlet weak var warrantyDetailView: UIView!
+    @IBOutlet weak var imeiLabel: UILabel!
+    @IBOutlet weak var imeiValueLabel: UILabel!
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var startDateValueLabel: UILabel!
+    @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var endDateValueLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var statusValueLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var notesValueLabel: UILabel!
+    
     
     //MARK: - Variables
     var fadeView: UIView = UIView()
     var currentMenuX:CGFloat = 0
+    var warrantyRequestLoader: NVActivityIndicatorView?
+    var warrantyRequest: DataRequest?
+    var warranty = WarrantyCachingModel.getWarranty()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,16 +56,88 @@ class WarrantyCheckViewController: UIViewController {
         
         self.menuButton.tintColor = RajaColors.headerRedColor.getColor()
         
-        self.initToolbar()
-        
-        self.warrantyTextField.delegate = self
+        if let _ = self.warranty {
+            
+            self.handleWarrantyDetailView(withAnimation: false)
+            
+        } else {
+            
+            self.initToolbar()
+            
+            self.warrantyTextField.delegate = self
+            
+            self.mobileTextField.delegate = self
+            
+        }
         
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.warrantyTextField.becomeFirstResponder()
+        if self.warranty == nil {
+            
+            self.warrantyTextField.becomeFirstResponder()
+            
+            self.congifureActivityIndicatorView()
+            
+        }
+        
+    }
+    
+    func congifureActivityIndicatorView() {
+        
+        let activityFrame = CGRect(x: 0, y: 0, width: loaderView.frame.width, height: loaderView.frame.height)
+        
+        warrantyRequestLoader = NVActivityIndicatorView(frame: activityFrame, type: .ballSpinFadeLoader, color: RajaColors.headerRedColor.getColor(), padding: nil)
+        
+        NVActivityIndicatorView.DEFAULT_BLOCKER_SIZE = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        
+        NVActivityIndicatorView.DEFAULT_BLOCKER_BACKGROUND_COLOR = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        
+        loaderView.addSubview(warrantyRequestLoader!)
+        
+    }
+    
+    func handleWarrantyDetailView(withAnimation: Bool) {
+        
+        if withAnimation {
+            
+            self.warrantyDetailView.isHidden = false
+            
+            UIView.animate(withDuration: 0.5, animations: {
+                
+                self.warrantyDetailView.alpha = 1
+                
+            })
+            
+        } else {
+            
+            self.warrantyDetailView.isHidden = false
+            
+            self.warrantyDetailView.alpha = 1
+            
+        }
+        
+        self.initializeWarrantyDetailView()
+        
+    }
+    
+    func initializeWarrantyDetailView() {
+        
+        if let warranty = self.warranty {
+            
+            imeiValueLabel.text = warranty.imei1
+                        
+            startDateValueLabel.text = warranty.start_date
+            
+            endDateValueLabel.text = warranty.end_date
+            
+            statusValueLabel.text = warranty.status
+            
+            notesValueLabel.text = warranty.notes
+            
+        }
         
     }
     
@@ -56,6 +151,15 @@ class WarrantyCheckViewController: UIViewController {
         
         self.view.endEditing(true)
         
+        //Send the request
+        if self.errorLabel.text!.isEmpty && self.mobileErrorLabel.text!.isEmpty {
+            
+            self.handleWarrantyRequestLoader(show: true)
+            
+            self.warrantyRequest = Connection.warrantyActivationRequest(mobileNumber: mobileTextField.text!, imei: warrantyTextField.text!, delegate: self)
+            
+        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -63,6 +167,164 @@ class WarrantyCheckViewController: UIViewController {
         self.view.endEditing(true)
         
     }
+    
+}
+
+extension WarrantyCheckViewController: UITextFieldDelegate {
+    
+    func initToolbar() {
+        
+        //init toolbar
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
+        //create left side empty space so that done button set on right side
+        let flexSpace = UIBarButtonItem(barButtonSystemItem:    .flexibleSpace, target: nil, action: nil)
+        
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
+        
+        toolbar.setItems([flexSpace, doneBtn], animated: false)
+        
+        toolbar.sizeToFit()
+        
+        //setting toolbar as inputAccessoryView
+        self.warrantyTextField.inputAccessoryView = toolbar
+        
+        self.mobileTextField.inputAccessoryView = toolbar
+        
+    }
+    @objc func doneButtonAction() {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        self.view.endEditing(true)
+        
+        return true
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        if let enteredText = textField.text,
+            textField == warrantyTextField {
+            
+            if enteredText.isEmpty || enteredText.characters.count < 10 {
+                
+                self.underLineView.backgroundColor = RajaColors.headerRedColor.getColor()
+                
+                self.errorLabel.text = NSLocalizedString("Please enter IMEI code", comment: "")
+                
+            } else {
+                
+                self.underLineView.backgroundColor = UIColor.lightGray
+                
+                self.errorLabel.text = ""
+                
+            }
+            
+        }
+        
+        if let enteredText = textField.text,
+            textField == mobileTextField {
+            
+            if !enteredText.isEmpty && !enteredText.isPhoneNumber {
+                
+                self.mobileUnderLineView.backgroundColor = RajaColors.headerRedColor.getColor()
+                
+                self.mobileErrorLabel.text = NSLocalizedString("Please enter a valid mobile number", comment: "")
+                
+            } else {
+                
+                self.mobileUnderLineView.backgroundColor = UIColor.lightGray
+                
+                self.mobileErrorLabel.text = ""
+                
+            }
+            
+        }
+        
+    }
+    
+    func handleWarrantyRequestLoader(show: Bool) {
+        
+        if show {
+            
+            self.loaderFadeView.isHidden = false
+            
+            self.loaderView.isHidden = false
+            
+            self.warrantyRequestLoader?.startAnimating()
+            
+            UIView.animate(withDuration: 1) {
+                
+                self.loaderFadeView.alpha = 0.9
+                
+            }
+            
+        } else {
+            
+            self.warrantyRequestLoader?.stopAnimating()
+            
+            self.loaderFadeView.isHidden = true
+            
+            self.loaderView.isHidden = true
+            
+            self.loaderFadeView.alpha = 0
+            
+        }
+        
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let searchCount = textField.text!.characters.count + (string.characters.count - range.length)
+        
+        var maximumCharactersCount = 15
+        
+        if textField == mobileTextField {
+            
+            maximumCharactersCount = 9
+            
+        }
+        
+        return searchCount <= maximumCharactersCount
+        
+    }
+    
+}
+
+extension WarrantyCheckViewController: warrantyActivationConnectionDelegate {
+    
+    func warrantyActivationSuccess(warranty: Warranty) {
+        
+        self.warranty = warranty
+        
+        WarrantyCachingModel.storeWarranty(warranty: warranty)
+        
+        self.handleWarrantyRequestLoader(show: false)
+        
+        self.handleWarrantyDetailView(withAnimation: true)
+        
+    }
+    
+    func warrantyActivationFailure(errorMessage: String) {
+        
+        self.handleWarrantyRequestLoader(show: false)
+        
+        let alerConfiguration = AlertPopup.AlertConfiguration(title: NSLocalizedString("Error", comment: ""), message: errorMessage, withOkButton: false, withRetryButton: true, withCancelButton: true)
+        
+        let alertPopup = AlertPopup.getAlertPopup(alertConfiguration: alerConfiguration) {
+            
+            self.handleWarrantyRequestLoader(show: true)
+            
+            self.warrantyRequest = Connection.warrantyActivationRequest(mobileNumber: self.mobileTextField.text!, imei: self.warrantyTextField.text!, delegate: self)
+            
+        }
+        
+        self.present(alertPopup, animated: true, completion: nil)
+        
+    }
+    
     
 }
 
@@ -156,69 +418,15 @@ extension WarrantyCheckViewController : SWRevealViewControllerDelegate {
         }
     }
     
+    func revealController(_ revealController: SWRevealViewController!, willAdd viewController: UIViewController!, for operation: SWRevealControllerOperation, animated: Bool) {
+        
+        self.warrantyRequest?.cancel()
+        
+    }
+    
     func revealControllerPanGestureShouldBegin(_ revealController: SWRevealViewController!) -> Bool {
         
         return true
-    }
-    
-}
-
-
-extension WarrantyCheckViewController: UITextFieldDelegate {
-    
-    func initToolbar() {
-        
-        //init toolbar
-        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
-        //create left side empty space so that done button set on right side
-        let flexSpace = UIBarButtonItem(barButtonSystemItem:    .flexibleSpace, target: nil, action: nil)
-        
-        let doneBtn: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonAction))
-        
-        toolbar.setItems([flexSpace, doneBtn], animated: false)
-        
-        toolbar.sizeToFit()
-        
-        //setting toolbar as inputAccessoryView
-        self.warrantyTextField.inputAccessoryView = toolbar
-        
-    }
-    @objc func doneButtonAction() {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        self.view.endEditing(true)
-        
-        return true
-        
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        if let enteredText = textField.text {
-            
-            if enteredText.isEmpty || enteredText.characters.count < 10 {
-                
-                self.initErrorMessage(with: NSLocalizedString("Please enter IMEI code", comment: ""))
-                
-            } else {
-                
-                self.initErrorMessage(with: "")
-                
-            }
-            
-        }
-        
-    }
-    
-    func initErrorMessage(with message: String) {
-        
-        self.underLineView.backgroundColor = message.isEmpty ? UIColor.lightGray : RajaColors.headerRedColor.getColor()
-            
-        self.errorLabel.text = message
-            
     }
     
 }

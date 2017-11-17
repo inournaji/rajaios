@@ -188,7 +188,45 @@ class Connection {
         }
         
     }
+ 
+    class func warrantyActivationRequest(mobileNumber: String, imei: String, delegate: warrantyActivationConnectionDelegate? = nil) -> DataRequest {
+        
+        let parameters = [ "imei1": imei]
+        
+        let warrantyHeaders = APIEndPoints.getHeaders()
+        
+        let warrantyRequest = APIEndPoints.warrantyActivate.getURL()
+        
+        return Alamofire.request(warrantyRequest, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: warrantyHeaders).validate().responseJSON { (response) in
+            
+            switch response.result {
+                
+            case .failure:
+                
+                print("error in contact us")
+                
+                delegate?.warrantyActivationFailure(errorMessage: NSLocalizedString("There was an error in connection", comment: ""))
+                
+            case .success(let anyobjectResponse):
+                
+                let jsonObject = JSON(anyobjectResponse)
+                
+                let warrantyACtivationStatus = Warranty(json: jsonObject)
+                
+                if let errorMessage = warrantyACtivationStatus.error {
+                    
+                    delegate?.warrantyActivationFailure(errorMessage: errorMessage)
+                    
+                } else {
+                    
+                    delegate?.warrantyActivationSuccess(warranty: warrantyACtivationStatus)
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
     
 }
-
-

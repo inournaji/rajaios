@@ -35,3 +35,10 @@ protocol contactUsConnectionDelegate {
     func contactUsFailure()
     
 }
+
+protocol warrantyActivationConnectionDelegate {
+    
+    func warrantyActivationSuccess(warranty: Warranty)
+    func warrantyActivationFailure(errorMessage: String)
+    
+}

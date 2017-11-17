@@ -27,6 +27,9 @@ class ContactUsViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var loaderFadeView: UIView!
     @IBOutlet weak var loaderView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var mobileNumberLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     
     //MARK: - Variables
     var fadeView: UIView = UIView()
@@ -50,6 +53,8 @@ class ContactUsViewController: UIViewController {
         self.searchButton.tintColor = RajaColors.headerRedColor.getColor()
         
         self.menuButton.tintColor = RajaColors.headerRedColor.getColor()
+        
+        self.supportArabicLayout()
         
     }
     
@@ -99,6 +104,26 @@ class ContactUsViewController: UIViewController {
             self.loaderView.isHidden = true
             
             self.loaderFadeView.alpha = 0
+            
+        }
+        
+    }
+    
+    func supportArabicLayout() {
+        
+        if BundleLocalization.sharedInstance().language == "ar" {
+
+            self.nameLabel.textAlignment = .right
+            self.nameTextField.textAlignment = .right
+            self.nameErrorLabel.textAlignment = .right
+            
+            self.mobileNumberLabel.textAlignment = .right
+            self.mobileTextField.textAlignment = .right
+            self.mobileErrorLabel.textAlignment = .right
+            
+            self.messageLabel.textAlignment = .right
+            self.messageErrorLabel.textAlignment = .right
+            self.messageTextField.textAlignment = .right
             
         }
         
@@ -348,9 +373,9 @@ extension ContactUsViewController: contactUsConnectionDelegate {
         
         self.handleContactRequestLoader(show: false)
         
-        let alertPopup = UIAlertController(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("There was an error in connection", comment: ""), preferredStyle: .alert)
+        let alerConfiguration = AlertPopup.AlertConfiguration(title: NSLocalizedString("Error", comment: ""), message: NSLocalizedString("There was an error in connection", comment: ""), withOkButton: false, withRetryButton: true, withCancelButton: true)
         
-        let retryAction = UIAlertAction(title: NSLocalizedString("Retry", comment: ""), style: .default) { (action) in
+        let alertPopup = AlertPopup.getAlertPopup(alertConfiguration: alerConfiguration) {
             
             if let name = self.nameTextField.text, let mobileText = self.mobileTextField.text, let messageText = self.messageTextField.text {
                 
@@ -362,12 +387,6 @@ extension ContactUsViewController: contactUsConnectionDelegate {
             
         }
         
-        let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
-        
-        alertPopup.addAction(retryAction)
-        
-        alertPopup.addAction(cancelAction)
-        
         self.present(alertPopup, animated: true, completion: nil)
         
     }
@@ -376,9 +395,9 @@ extension ContactUsViewController: contactUsConnectionDelegate {
         
         self.handleContactRequestLoader(show: false)
         
-        let alertPopup = UIAlertController(title: NSLocalizedString("Success", comment: ""), message: NSLocalizedString("Thank you for your message", comment: ""), preferredStyle: .alert)
+        let alerConfiguration = AlertPopup.AlertConfiguration(title: NSLocalizedString("Success", comment: ""), message: NSLocalizedString("Thank you for your message", comment: ""), withOkButton: true, withRetryButton: false, withCancelButton: false)
         
-        let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { (action) in
+        let alertPopup = AlertPopup.getAlertPopup(alertConfiguration: alerConfiguration, okCompletion: {
             
             if let revealVC = self.revealViewController() {
                 
@@ -386,9 +405,7 @@ extension ContactUsViewController: contactUsConnectionDelegate {
                 
             }
             
-        }
-        
-        alertPopup.addAction(okAction)
+        })
         
         self.present(alertPopup, animated: true, completion: nil)
         
