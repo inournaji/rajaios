@@ -21,7 +21,7 @@
 "aJB-EY-mjO.placeholder" = "بحث...";
 
 /* Class = "UILabel"; text = "Sorry, but there are no items in this category."; ObjectID = "bCs-LW-gUF"; */
-"bCs-LW-gUF.text" = "عذراً، لايوجد أي عنصر من القائمة المختارة.";
+"bCs-LW-gUF.text" = "عذراً, حدث خطأ في الأتصال يمكنك الضغط لإعادة المحاولة.";
 
 /* Class = "UILabel"; text = "Message"; ObjectID = "e1W-2w-3W8"; */
 "e1W-2w-3W8.text" = "الرسالة";

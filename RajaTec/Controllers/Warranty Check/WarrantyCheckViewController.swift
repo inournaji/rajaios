@@ -36,6 +36,7 @@ class WarrantyCheckViewController: UIViewController {
     @IBOutlet weak var statusValueLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
     @IBOutlet weak var notesValueLabel: UILabel!
+    @IBOutlet weak var notesUnderLineView: UIView!
     
     
     //MARK: - Variables
@@ -70,6 +71,8 @@ class WarrantyCheckViewController: UIViewController {
             
         }
         
+        supportArabicLayout()
+        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -82,6 +85,16 @@ class WarrantyCheckViewController: UIViewController {
             self.congifureActivityIndicatorView()
             
         }
+        
+    }
+    
+    func supportArabicLayout() {
+        
+        SupportRTLLayout.rightTextAlighment(superView: self.view)
+        
+        SupportRTLLayout.transform(views: [self.warrantyDetailView])
+        
+        SupportRTLLayout.transform(superView: self.warrantyDetailView)
         
     }
     
@@ -127,15 +140,21 @@ class WarrantyCheckViewController: UIViewController {
         
         if let warranty = self.warranty {
             
-            imeiValueLabel.text = warranty.imei1
+            self.imeiValueLabel.text = warranty.imei1
                         
-            startDateValueLabel.text = warranty.start_date
+            self.startDateValueLabel.text = warranty.start_date
             
-            endDateValueLabel.text = warranty.end_date
+            self.endDateValueLabel.text = warranty.end_date
             
-            statusValueLabel.text = warranty.status
+            self.statusValueLabel.text = warranty.status
             
-            notesValueLabel.text = warranty.notes
+            self.notesValueLabel.text = warranty.notes
+            
+            self.notesValueLabel.isHidden = (warranty.notes?.isEmpty ?? false ) ? true : false
+            
+            self.notesLabel.isHidden = (warranty.notes?.isEmpty ?? false ) ? true : false
+            
+            self.notesUnderLineView.isHidden = (warranty.notes?.isEmpty ?? false ) ? true : false
             
         }
         
@@ -283,7 +302,7 @@ extension WarrantyCheckViewController: UITextFieldDelegate {
         
         if textField == mobileTextField {
             
-            maximumCharactersCount = 9
+            maximumCharactersCount = 10
             
         }
         

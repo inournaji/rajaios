@@ -29,16 +29,15 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.splash1ImageView.alpha = 0
-        self.splash2ImageView.alpha = 0
-        self.splash3ImageView.alpha = 0
-        self.splash4ImageView.alpha = 0
-        self.splash5ImageView.alpha = 0
-        self.splash6ImageView.alpha = 0
-        self.splash7ImageView.alpha = 0
-        self.splash8ImageView.alpha = 0
+     
+        self.congifureActivityIndicatorView()
         
+        self.handleActivityIndicator(animate: true)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+                
         if changeLanguage {
             
             if let controllers = self.navigationController?.viewControllers {
@@ -53,25 +52,20 @@ class SplashViewController: UIViewController {
             
             self.navigationController?.setViewControllers([self], animated: false)
             
-        }
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        self.congifureActivityIndicatorView()
-        
-        self.handleActivityIndicator(animate: true)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-        
-            self.handleActivityIndicator(animate: false)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                
+                self.handleActivityIndicator(animate: false)
+                
+                let swReavealVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SWRevealViewControllerID")
+                
+                self.navigationController?.pushViewController(swReavealVC, animated: true)
+                
+            }
             
-            let swReavealVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SWRevealViewControllerID")
+        } else {
             
-            self.navigationController?.pushViewController(swReavealVC, animated: true)
-
+            Connection.getHomeOffers(delegate: self)
+            
         }
         
     }
@@ -164,6 +158,26 @@ class SplashViewController: UIViewController {
         
     }
 
+}
+
+extension SplashViewController : getHomeOffersConnectionDelegate {
+    
+    func getHomeOffersConnectionSuccess() {
+        
+        let swReavealVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SWRevealViewControllerID")
+        
+        self.navigationController?.pushViewController(swReavealVC, animated: true)
+        
+    }
+    
+    func getHomeOffersConnectionFailure() {
+        
+        let swReavealVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SWRevealViewControllerID")
+        
+        self.navigationController?.pushViewController(swReavealVC, animated: true)
+        
+    }
+    
 }
 
 extension SplashViewController {

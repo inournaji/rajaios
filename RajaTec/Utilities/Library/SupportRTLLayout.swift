@@ -26,4 +26,56 @@ class SupportRTLLayout {
         
     }
     
+    class func transform(superView parentView: UIView) {
+        
+        if BundleLocalization.sharedInstance().language == "ar" {
+            
+            for viwe in parentView.subviews {
+                
+                if viwe.subviews.count > 1 {
+                    
+                    transform(superView: viwe)
+                    
+                } else {
+                    
+                    viwe.transform = transform
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    class func rightTextAlighment(superView parentView: UIView) {
+        
+        if BundleLocalization.sharedInstance().language == "ar" {
+            
+            for viwe in parentView.subviews {
+                
+                if viwe.subviews.count > 1 {
+                    
+                    rightTextAlighment(superView: viwe)
+                    
+                } else {
+                    
+                    if let label = viwe as? UILabel {
+                        
+                        label.textAlignment = .right
+                        
+                    } else if let textField = viwe as? UITextField {
+                        
+                        textField.textAlignment = .right
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+    
 }

@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ItemsListViewController.handleActivityIndicator(animate:):ItemsListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mobileDataSource.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "OfferTableViewCell.configureCell(offer:):OfferTableViewCell.swift">
       </ContextState>
       <ContextState
@@ -26,6 +34,14 @@
          <PersistentStrings>
             <PersistentString
                value = "!UserDefaults().bool(forKey: SplashViewController.userLanguageKey)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Offers.storeOffers(offers:):Offers.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Date()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -52,29 +68,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "OffersViewController.tableView(_:numberOfRowsInSection:):OffersViewController.swift">
+         contextName = "SearchViewController.collectionView(_:numberOfItemsInSection:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.searchItems.count">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "OffersViewController.viewDidLoad():OffersViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "offersNotifications.count">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SearchViewController.searchBar(_:shouldChangeTextIn:replacementText:):SearchViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "searchBar.text!.characters.count">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SearchViewController.collectionView(_:numberOfItemsInSection:):SearchViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.searchItems.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -88,6 +93,17 @@
                value = "self.currentGallaryIndex">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SearchViewController.searchBar(_:shouldChangeTextIn:replacementText:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchBar.text!.characters.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "OffersViewController.tableView(_:numberOfRowsInSection:):OffersViewController.swift">
       </ContextState>
       <ContextState
          contextName = "HomeDashboardViewController.handlePanGesture(panGesture:):HomeDashboardViewController.swift">

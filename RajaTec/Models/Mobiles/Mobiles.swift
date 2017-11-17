@@ -26,6 +26,8 @@ class Mobiles {
         
         UserDefaults.standard.set(encodedData, forKey: CachingKeys.cacheMobiles.rawValue)
         
+        UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: CachingKeys.lastPullToRefreshDate.rawValue)
+        
         UserDefaults.standard.synchronize()
         
     }

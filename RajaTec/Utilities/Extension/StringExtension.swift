@@ -12,7 +12,7 @@ extension String {
     
     var isPhoneNumber: Bool {
         
-        let PHONE_REGEX = "(^[9][0-9]{8})"
+        let PHONE_REGEX = "(^[0][0-9]{9})|([9][0-9]{8})"
         
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
         

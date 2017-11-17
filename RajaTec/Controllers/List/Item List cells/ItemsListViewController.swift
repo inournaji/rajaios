@@ -61,6 +61,7 @@ class ItemsListViewController: UIViewController {
     var accessoriesDataSource = [Accessory]()
     var itemListType = ListType.Home
     var connectionActivityIndicator: NVActivityIndicatorView?
+    let refreshControl = UIRefreshControl()
     
     //MARK: - Delegates
     weak var itemsListViewControllerDelegate: ItemsListViewControllerDelegate?
@@ -92,6 +93,55 @@ class ItemsListViewController: UIViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.configurePullToRefresh()
+        
+    }
+    
+    func configurePullToRefresh() {
+        
+        self.updatePulltorefreshTitle()
+        
+        refreshControl.tintColor = RajaColors.headerRedColor.getColor()
+        
+        refreshControl.addTarget(self, action: #selector(pullToRefreshAction(sender:)), for: .valueChanged)
+        
+        self.itemListCollectionView.addSubview(refreshControl)
+        
+        self.itemListCollectionView.sendSubview(toBack: refreshControl)
+        
+        self.refreshControl.layer.zPosition = -1
+        
+        self.itemListCollectionView.alwaysBounceVertical = true
+        
+    }
+    
+    func updatePulltorefreshTitle() {
+        
+        let lastPullToRefreshTimeInterval = UserDefaults.standard.double(forKey: CachingKeys.lastPullToRefreshDate.rawValue)
+        
+        if lastPullToRefreshTimeInterval > 0 {
+            
+            let lastDate = Date(timeIntervalSince1970: lastPullToRefreshTimeInterval)
+            
+            let dateFormatter = DateFormatter()
+            
+            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm a"
+            
+            let dateString =  "\(NSLocalizedString("Last pull to refresh", comment: "")): \(dateFormatter.string(from: lastDate))"
+            
+            refreshControl.attributedTitle = NSAttributedString(string: dateString)
+            
+        } else {
+            
+            refreshControl.attributedTitle = NSAttributedString(string: "")
+            
+        }
+                
+    }
+    
     func congifureActivityIndicatorView() {
         
         let activityFrame = CGRect(x: 0, y: 0, width: activityIndicatorView.frame.width, height: activityIndicatorView.frame.height)
@@ -110,9 +160,9 @@ class ItemsListViewController: UIViewController {
         
         if Offers.existingOffers {
             
-            self.handleActivityIndicator(animate: false)
-            
             self.homeDataSource = Offers.getOffers()
+            
+            self.handleActivityIndicator(animate: false)
             
         } else {
             
@@ -128,9 +178,9 @@ class ItemsListViewController: UIViewController {
         
         if Mobiles.existingMobiles {
             
-            self.handleActivityIndicator(animate: false)
-            
             self.mobileDataSource = Mobiles.getMobiles()
+            
+            self.handleActivityIndicator(animate: false)
             
         } else {
             
@@ -146,14 +196,48 @@ class ItemsListViewController: UIViewController {
         
         if Accessories.existingAccessories {
             
-            self.handleActivityIndicator(animate: false)
-            
             self.accessoriesDataSource = Accessories.getAccessories()
+            
+            self.handleActivityIndicator(animate: false)
             
         } else {
             
             self.handleActivityIndicator(animate: true)
             
+            Connection.getAccessories(delegate: self)
+            
+        }
+        
+    }
+    
+    @objc func pullToRefreshAction(sender: UIRefreshControl) {
+        
+        switch self.itemListType {
+        case .Home:
+            Connection.getHomeOffers(delegate: self)
+            
+        case .mobile:
+            Connection.getMobiles(delegate: self)
+            
+        case .accessories:
+            Connection.getAccessories(delegate: self)
+            
+        }
+        
+    }
+
+    @IBAction func retryAction(_ sender: Any) {
+        
+        self.handleActivityIndicator(animate: true)
+        
+        switch self.itemListType {
+        case .Home:
+            Connection.getHomeOffers(delegate: self)
+            
+        case .mobile:
+            Connection.getMobiles(delegate: self)
+            
+        case .accessories:
             Connection.getAccessories(delegate: self)
             
         }
@@ -168,9 +252,23 @@ class ItemsListViewController: UIViewController {
             
             self.connectionActivityIndicator?.startAnimating()
             
+            self.noResultLabel.isHidden = true
+            
         } else {
             
             self.connectionActivityIndicator?.stopAnimating()
+            
+            switch itemListType {
+            case .Home:
+                self.noResultLabel.isHidden = self.homeDataSource.count != 0
+                
+            case .mobile:
+                self.noResultLabel.isHidden = self.mobileDataSource.count != 0
+                
+            case .accessories:
+                self.noResultLabel.isHidden = self.accessoriesDataSource.count != 0
+                
+            }
             
         }
         
@@ -293,7 +391,13 @@ extension ItemsListViewController : getHomeOffersConnectionDelegate {
         
         self.homeDataSource = Offers.getOffers()
         
-        self.noResultLabel.isHidden = self.homeDataSource.count != 0
+        if self.refreshControl.isRefreshing {
+            
+            self.refreshControl.endRefreshing()
+            
+        }
+        
+        self.updatePulltorefreshTitle()
         
         self.itemListCollectionView.reloadData()
         
@@ -301,9 +405,13 @@ extension ItemsListViewController : getHomeOffersConnectionDelegate {
     
     func getHomeOffersConnectionFailure() {
         
-        self.handleActivityIndicator(animate: false)
+        if self.refreshControl.isRefreshing {
+            
+            self.refreshControl.endRefreshing()
+            
+        }
         
-        self.noResultLabel.isHidden = self.homeDataSource.count != 0
+        self.handleActivityIndicator(animate: false)
         
     }
     
@@ -316,7 +424,13 @@ extension ItemsListViewController : getMobilesConnectionDelegate {
         
         self.mobileDataSource = Mobiles.getMobiles()
         
-        self.noResultLabel.isHidden = self.mobileDataSource.count != 0
+        if self.refreshControl.isRefreshing {
+            
+            self.refreshControl.endRefreshing()
+            
+        }
+        
+        self.updatePulltorefreshTitle()
         
         self.itemListCollectionView.reloadData()
         
@@ -324,9 +438,13 @@ extension ItemsListViewController : getMobilesConnectionDelegate {
     
     func getMobilesConnectionFailure() {
         
-        self.handleActivityIndicator(animate: false)
+        if self.refreshControl.isRefreshing {
+            
+            self.refreshControl.endRefreshing()
+            
+        }
         
-        self.noResultLabel.isHidden = self.homeDataSource.count != 0
+        self.handleActivityIndicator(animate: false)
         
     }
     
@@ -340,7 +458,13 @@ extension ItemsListViewController : getAccessoriesConnectionDelegate {
         
         self.accessoriesDataSource = Accessories.getAccessories()
         
-        self.noResultLabel.isHidden = self.accessoriesDataSource.count != 0
+        if self.refreshControl.isRefreshing {
+            
+            self.refreshControl.endRefreshing()
+            
+        }
+        
+        self.updatePulltorefreshTitle()
         
         self.itemListCollectionView.reloadData()
         
@@ -348,9 +472,13 @@ extension ItemsListViewController : getAccessoriesConnectionDelegate {
     
     func getAccessoriesFailure() {
         
-        self.handleActivityIndicator(animate: false)
+        if self.refreshControl.isRefreshing {
+            
+            self.refreshControl.endRefreshing()
+            
+        }
         
-        self.noResultLabel.isHidden = self.homeDataSource.count != 0
+        self.handleActivityIndicator(animate: false)
         
     }
     

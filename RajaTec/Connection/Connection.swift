@@ -12,12 +12,16 @@ import SwiftyJSON
 
 class Connection {
     
+    static let manager = Alamofire.SessionManager.default
+    
     //MARK: - get home offers
     class func getHomeOffers(delegate: getHomeOffersConnectionDelegate? = nil) {
         
         let getHomeURL = APIEndPoints.getHomeOffers.getURL()
         
-        Alamofire.request(getHomeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON(completionHandler: { (response) in
+        manager.session.configuration.timeoutIntervalForRequest = 40
+        
+        manager.request(getHomeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON(completionHandler: { (response) in
             
             switch response.result {
                 
@@ -62,7 +66,9 @@ class Connection {
         
         let getHomeURL = APIEndPoints.getMobiles.getURL()
         
-        Alamofire.request(getHomeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON(completionHandler: { (response) in
+        manager.session.configuration.timeoutIntervalForRequest = 40
+        
+        manager.request(getHomeURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON(completionHandler: { (response) in
             
             switch response.result {
                 
@@ -107,7 +113,9 @@ class Connection {
         
         let getAccessoryURL = APIEndPoints.getMobileAccessories.getURL()
         
-        Alamofire.request(getAccessoryURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON(completionHandler: { (response) in
+        manager.session.configuration.timeoutIntervalForRequest = 40
+        
+        manager.request(getAccessoryURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON(completionHandler: { (response) in
             
             switch response.result {
                 
@@ -157,7 +165,9 @@ class Connection {
         
         let contactUsRequest = APIEndPoints.contactUs.getURL()
         
-        return Alamofire.request(contactUsRequest, method: .post, parameters: parameters, headers: contactUsHeaders).validate().responseJSON { (response) in
+        manager.session.configuration.timeoutIntervalForRequest = 40
+        
+        return manager.request(contactUsRequest, method: .post, parameters: parameters, headers: contactUsHeaders).validate().responseJSON { (response) in
             
             switch response.result {
                 
@@ -197,7 +207,9 @@ class Connection {
         
         let warrantyRequest = APIEndPoints.warrantyActivate.getURL()
         
-        return Alamofire.request(warrantyRequest, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: warrantyHeaders).validate().responseJSON { (response) in
+        manager.session.configuration.timeoutIntervalForRequest = 40
+        
+        return manager.request(warrantyRequest, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: warrantyHeaders).validate().responseJSON { (response) in
             
             switch response.result {
                 

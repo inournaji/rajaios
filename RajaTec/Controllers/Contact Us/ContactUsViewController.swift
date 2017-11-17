@@ -110,22 +110,8 @@ class ContactUsViewController: UIViewController {
     }
     
     func supportArabicLayout() {
-        
-        if BundleLocalization.sharedInstance().language == "ar" {
 
-            self.nameLabel.textAlignment = .right
-            self.nameTextField.textAlignment = .right
-            self.nameErrorLabel.textAlignment = .right
-            
-            self.mobileNumberLabel.textAlignment = .right
-            self.mobileTextField.textAlignment = .right
-            self.mobileErrorLabel.textAlignment = .right
-            
-            self.messageLabel.textAlignment = .right
-            self.messageErrorLabel.textAlignment = .right
-            self.messageTextField.textAlignment = .right
-            
-        }
+        SupportRTLLayout.rightTextAlighment(superView: self.view)
         
     }
     

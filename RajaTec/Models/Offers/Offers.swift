@@ -26,6 +26,8 @@ class Offers {
         
         UserDefaults.standard.set(encodedData, forKey: CachingKeys.cacheOffers.rawValue)
         
+        UserDefaults.standard.set(Date().timeIntervalSince1970, forKey: CachingKeys.lastPullToRefreshDate.rawValue)
+        
         UserDefaults.standard.synchronize()
         
     }

@@ -50,7 +50,7 @@ class SearchViewController: UIViewController {
         }
         
     }
-
+    
     @IBAction func closeAction(_ sender: Any) {
         
         self.view.endEditing(true)
