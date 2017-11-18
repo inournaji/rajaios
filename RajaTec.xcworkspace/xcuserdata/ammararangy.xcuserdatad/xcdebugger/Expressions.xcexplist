@@ -3,6 +3,33 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SearchViewController.collectionView(_:cellForItemAt:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.searchItems">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MobileDetailViewController.previousImageAction(_:):MobileDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.currentGallaryIndex &lt;= 0">
+            </PersistentString>
+            <PersistentString
+               value = "self.currentGallaryIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SearchViewController.searchBar(_:shouldChangeTextIn:replacementText:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchBar.text!.characters.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SideMenuTableViewCell.expandCollapse():SideMenuTableViewCell.swift">
          <PersistentStrings>
             <PersistentString
@@ -11,47 +38,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ItemsListViewController.handleActivityIndicator(animate:):ItemsListViewController.swift">
+         contextName = "ItemsListViewController.getHomeOffers():ItemsListViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.mobileDataSource.count">
+               value = "self.homeDataSource">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "OfferTableViewCell.configureCell(offer:):OfferTableViewCell.swift">
-      </ContextState>
-      <ContextState
-         contextName = "SplashViewController.viewDidLoad():SplashViewController.swift">
+         contextName = "OffersViewController.viewDidLoad():OffersViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.navigationController?.viewControllers">
+               value = "offersNotifications.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SideMenuViewController.englishTapAction(_:):SideMenuViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "!UserDefaults().bool(forKey: SplashViewController.userLanguageKey)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "static Offers.storeOffers(offers:):Offers.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "Date()">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "UIImageView.changeImageTintColor(_:):UIImageExtension.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.image">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "OffersViewController.tableView(_:numberOfRowsInSection:):OffersViewController.swift">
       </ContextState>
       <ContextState
          contextName = "MobileDetailViewController.nextImageAction(_:):MobileDetailViewController.swift">
@@ -76,45 +79,39 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "OffersViewController.viewDidLoad():OffersViewController.swift">
+         contextName = "SideMenuTableViewCell.tableView(_:numberOfRowsInSection:):SideMenuTableViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SideMenuViewController.englishTapAction(_:):SideMenuViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "offersNotifications.count">
+               value = "!UserDefaults().bool(forKey: SplashViewController.userLanguageKey)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "MobileDetailViewController.previousImageAction(_:):MobileDetailViewController.swift">
+         contextName = "SplashViewController.viewDidLoad():SplashViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.currentGallaryIndex &lt;= 0">
-            </PersistentString>
-            <PersistentString
-               value = "self.currentGallaryIndex">
+               value = "self.navigationController?.viewControllers">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SearchViewController.searchBar(_:shouldChangeTextIn:replacementText:):SearchViewController.swift">
+         contextName = "static Offers.storeOffers(offers:):Offers.swift">
          <PersistentStrings>
             <PersistentString
-               value = "searchBar.text!.characters.count">
+               value = "Date()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "OffersViewController.tableView(_:numberOfRowsInSection:):OffersViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "HomeDashboardViewController.handlePanGesture(panGesture:):HomeDashboardViewController.swift">
+         contextName = "UIImageView.changeImageTintColor(_:):UIImageExtension.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.revealViewController()">
+               value = "self.image">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in static Connection.warrantyActivationRequest(mobileNumber:imei:delegate:):Connection.swift">
       </ContextState>
       <ContextState
          contextName = "String.isPhoneNumber.getter:StringExtension.swift">
@@ -125,10 +122,29 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SearchViewController.collectionView(_:cellForItemAt:):SearchViewController.swift">
+         contextName = "HomeDashboardViewController.handlePanGesture(panGesture:):HomeDashboardViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.searchItems">
+               value = "self.revealViewController()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "OfferTableViewCell.configureCell(offer:):OfferTableViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ItemsListViewController.updatePulltorefreshTitle():ItemsListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dateFormatter.dateFormat">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ItemsListViewController.handleActivityIndicator(animate:):ItemsListViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mobileDataSource">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -141,7 +157,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SideMenuTableViewCell.tableView(_:numberOfRowsInSection:):SideMenuTableViewCell.swift">
+         contextName = "closure #1 in static Connection.warrantyActivationRequest(mobileNumber:imei:delegate:):Connection.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

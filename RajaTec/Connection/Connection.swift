@@ -201,7 +201,7 @@ class Connection {
  
     class func warrantyActivationRequest(mobileNumber: String, imei: String, delegate: warrantyActivationConnectionDelegate? = nil) -> DataRequest {
         
-        let parameters = [ "imei1": imei]
+        let parameters = [ "imei1": imei, "mobile": mobileNumber]
         
         let warrantyHeaders = APIEndPoints.getHeaders()
         

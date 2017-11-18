@@ -822,7 +822,7 @@ you can tap to retry.</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZi-Is-cSa" userLabel="Name View">
-                                <rect key="frame" x="16" y="95" width="288" height="55"/>
+                                <rect key="frame" x="16" y="95" width="288" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYf-Lg-QkV">
                                         <rect key="frame" x="0.0" y="8" width="288" height="17"/>
@@ -831,10 +831,10 @@ you can tap to retry.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your name (Mandatory)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Vs-Vs-iNE">
-                                        <rect key="frame" x="20" y="30" width="248" height="14"/>
+                                        <rect key="frame" x="0.0" y="30" width="288" height="16"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="animatesPlaceholder" value="NO"/>
@@ -857,14 +857,14 @@ you can tap to retry.</string>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFB-x4-IUI">
-                                        <rect key="frame" x="15" y="44" width="258" height="1"/>
+                                        <rect key="frame" x="-5" y="56" width="298" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="DJe-Uv-xdS"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa6-gy-wUx">
-                                        <rect key="frame" x="20" y="50" width="248" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="62" width="288" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" red="0.89411764709999997" green="0.17254901959999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -872,14 +872,14 @@ you can tap to retry.</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="9Vs-Vs-iNE" secondAttribute="trailing" constant="20" id="0pP-kU-uxN"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Vs-Vs-iNE" secondAttribute="trailing" id="0pP-kU-uxN"/>
                                     <constraint firstItem="cFB-x4-IUI" firstAttribute="trailing" secondItem="9Vs-Vs-iNE" secondAttribute="trailing" constant="5" id="5hA-Ed-FUG"/>
                                     <constraint firstItem="oa6-gy-wUx" firstAttribute="trailing" secondItem="9Vs-Vs-iNE" secondAttribute="trailing" id="BhW-WZ-8bE"/>
                                     <constraint firstItem="qYf-Lg-QkV" firstAttribute="leading" secondItem="NZi-Is-cSa" secondAttribute="leading" id="Hha-El-SOt"/>
-                                    <constraint firstItem="cFB-x4-IUI" firstAttribute="top" secondItem="9Vs-Vs-iNE" secondAttribute="bottom" id="QtU-nv-ogB"/>
+                                    <constraint firstItem="cFB-x4-IUI" firstAttribute="top" secondItem="9Vs-Vs-iNE" secondAttribute="bottom" constant="10" id="QtU-nv-ogB"/>
                                     <constraint firstAttribute="bottom" secondItem="oa6-gy-wUx" secondAttribute="bottom" constant="5" id="Vi1-u2-dkr"/>
                                     <constraint firstItem="9Vs-Vs-iNE" firstAttribute="top" secondItem="qYf-Lg-QkV" secondAttribute="bottom" constant="5" id="XVS-cl-9vU"/>
-                                    <constraint firstItem="9Vs-Vs-iNE" firstAttribute="leading" secondItem="NZi-Is-cSa" secondAttribute="leading" constant="20" id="bto-tZ-vEj"/>
+                                    <constraint firstItem="9Vs-Vs-iNE" firstAttribute="leading" secondItem="NZi-Is-cSa" secondAttribute="leading" id="bto-tZ-vEj"/>
                                     <constraint firstItem="qYf-Lg-QkV" firstAttribute="top" secondItem="NZi-Is-cSa" secondAttribute="top" constant="8" id="gcb-Jc-ZLw"/>
                                     <constraint firstItem="cFB-x4-IUI" firstAttribute="leading" secondItem="9Vs-Vs-iNE" secondAttribute="leading" constant="-5" id="jpb-gA-rlX"/>
                                     <constraint firstAttribute="trailing" secondItem="qYf-Lg-QkV" secondAttribute="trailing" id="l4o-Rf-18U"/>
@@ -888,7 +888,7 @@ you can tap to retry.</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnT-1Y-U14" userLabel="Name View">
-                                <rect key="frame" x="16" y="150" width="288" height="55"/>
+                                <rect key="frame" x="16" y="162" width="288" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kV-pJ-L34">
                                         <rect key="frame" x="0.0" y="8" width="288" height="17"/>
@@ -897,10 +897,10 @@ you can tap to retry.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your mobile number " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rra-hc-t5n">
-                                        <rect key="frame" x="20" y="30" width="248" height="14"/>
+                                        <rect key="frame" x="0.0" y="30" width="288" height="16"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="animatesPlaceholder" value="NO"/>
@@ -923,14 +923,14 @@ you can tap to retry.</string>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URh-ZR-JT0">
-                                        <rect key="frame" x="15" y="44" width="258" height="1"/>
+                                        <rect key="frame" x="-5" y="56" width="298" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Tf4-mW-LpC"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1T-U6-54a">
-                                        <rect key="frame" x="20" y="50" width="248" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="62" width="288" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" red="0.89411764709999997" green="0.17254901959999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -938,12 +938,12 @@ you can tap to retry.</string>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="URh-ZR-JT0" firstAttribute="top" secondItem="rra-hc-t5n" secondAttribute="bottom" id="7ax-T2-0eE"/>
-                                    <constraint firstAttribute="trailing" secondItem="rra-hc-t5n" secondAttribute="trailing" constant="20" id="AtF-5W-n2e"/>
+                                    <constraint firstItem="URh-ZR-JT0" firstAttribute="top" secondItem="rra-hc-t5n" secondAttribute="bottom" constant="10" id="7ax-T2-0eE"/>
+                                    <constraint firstAttribute="trailing" secondItem="rra-hc-t5n" secondAttribute="trailing" id="AtF-5W-n2e"/>
                                     <constraint firstAttribute="bottom" secondItem="L1T-U6-54a" secondAttribute="bottom" constant="5" id="Gdi-LC-vea"/>
                                     <constraint firstItem="L1T-U6-54a" firstAttribute="leading" secondItem="rra-hc-t5n" secondAttribute="leading" id="GeT-aj-puw"/>
                                     <constraint firstAttribute="trailing" secondItem="2kV-pJ-L34" secondAttribute="trailing" id="N54-LB-m0J"/>
-                                    <constraint firstItem="rra-hc-t5n" firstAttribute="leading" secondItem="MnT-1Y-U14" secondAttribute="leading" constant="20" id="RqS-md-Uf8"/>
+                                    <constraint firstItem="rra-hc-t5n" firstAttribute="leading" secondItem="MnT-1Y-U14" secondAttribute="leading" id="RqS-md-Uf8"/>
                                     <constraint firstItem="L1T-U6-54a" firstAttribute="top" secondItem="URh-ZR-JT0" secondAttribute="bottom" constant="5" id="U26-md-G0s"/>
                                     <constraint firstItem="URh-ZR-JT0" firstAttribute="trailing" secondItem="rra-hc-t5n" secondAttribute="trailing" constant="5" id="Xst-oI-YKS"/>
                                     <constraint firstItem="rra-hc-t5n" firstAttribute="top" secondItem="2kV-pJ-L34" secondAttribute="bottom" constant="5" id="YM2-F9-yqS"/>
@@ -954,7 +954,7 @@ you can tap to retry.</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rX-W7-3XQ" userLabel="Name View">
-                                <rect key="frame" x="16" y="205" width="288" height="55"/>
+                                <rect key="frame" x="16" y="229" width="288" height="67"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1W-2w-3W8">
                                         <rect key="frame" x="0.0" y="8" width="288" height="17"/>
@@ -963,10 +963,10 @@ you can tap to retry.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your message here " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fW4-Wq-9vw">
-                                        <rect key="frame" x="20" y="30" width="248" height="14"/>
+                                        <rect key="frame" x="0.0" y="30" width="288" height="16"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="animatesPlaceholder" value="NO"/>
@@ -989,14 +989,14 @@ you can tap to retry.</string>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggg-F8-yGd">
-                                        <rect key="frame" x="15" y="44" width="258" height="1"/>
+                                        <rect key="frame" x="-5" y="56" width="298" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="r1J-gw-kY3"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggP-20-w8f">
-                                        <rect key="frame" x="20" y="50" width="248" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="62" width="288" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" red="0.89411764709999997" green="0.17254901959999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1008,19 +1008,30 @@ you can tap to retry.</string>
                                     <constraint firstItem="ggP-20-w8f" firstAttribute="leading" secondItem="fW4-Wq-9vw" secondAttribute="leading" id="9k3-CQ-lLC"/>
                                     <constraint firstItem="e1W-2w-3W8" firstAttribute="leading" secondItem="6rX-W7-3XQ" secondAttribute="leading" id="FhG-LI-j2h"/>
                                     <constraint firstItem="Ggg-F8-yGd" firstAttribute="leading" secondItem="fW4-Wq-9vw" secondAttribute="leading" constant="-5" id="GFB-Bx-dGf"/>
-                                    <constraint firstItem="Ggg-F8-yGd" firstAttribute="top" secondItem="fW4-Wq-9vw" secondAttribute="bottom" id="HAJ-Mw-4jN"/>
+                                    <constraint firstItem="Ggg-F8-yGd" firstAttribute="top" secondItem="fW4-Wq-9vw" secondAttribute="bottom" constant="10" id="HAJ-Mw-4jN"/>
                                     <constraint firstItem="fW4-Wq-9vw" firstAttribute="top" secondItem="e1W-2w-3W8" secondAttribute="bottom" constant="5" id="HYY-8k-ZhM"/>
                                     <constraint firstItem="Ggg-F8-yGd" firstAttribute="trailing" secondItem="fW4-Wq-9vw" secondAttribute="trailing" constant="5" id="bsH-Os-Tw7"/>
                                     <constraint firstItem="ggP-20-w8f" firstAttribute="trailing" secondItem="fW4-Wq-9vw" secondAttribute="trailing" id="csA-tw-gPp"/>
-                                    <constraint firstAttribute="trailing" secondItem="fW4-Wq-9vw" secondAttribute="trailing" constant="20" id="hhx-F5-JIe"/>
-                                    <constraint firstItem="fW4-Wq-9vw" firstAttribute="leading" secondItem="6rX-W7-3XQ" secondAttribute="leading" constant="20" id="mpo-t0-3Ss"/>
+                                    <constraint firstAttribute="trailing" secondItem="fW4-Wq-9vw" secondAttribute="trailing" id="hhx-F5-JIe"/>
+                                    <constraint firstItem="fW4-Wq-9vw" firstAttribute="leading" secondItem="6rX-W7-3XQ" secondAttribute="leading" id="mpo-t0-3Ss"/>
                                     <constraint firstItem="e1W-2w-3W8" firstAttribute="top" secondItem="6rX-W7-3XQ" secondAttribute="top" constant="8" id="msb-NV-MWa"/>
                                     <constraint firstAttribute="bottom" secondItem="ggP-20-w8f" secondAttribute="bottom" constant="5" id="sVz-hA-fG3"/>
                                     <constraint firstAttribute="trailing" secondItem="e1W-2w-3W8" secondAttribute="trailing" id="vUA-53-sfo"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-xE-Ka9">
+                                <rect key="frame" x="0.0" y="75" width="320" height="493"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6h-54-tfs">
+                                <rect key="frame" x="128" y="289" width="64" height="64.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G6h-54-tfs" secondAttribute="height" multiplier="1:1" id="R34-NJ-LGI"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQa-eb-dtE">
-                                <rect key="frame" x="87" y="290" width="146" height="31"/>
+                                <rect key="frame" x="87" y="326" width="146" height="31"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentEdgeInsets" minX="45" minY="8" maxX="45" maxY="5"/>
                                 <state key="normal" title="SUBMIT">
@@ -1036,17 +1047,6 @@ you can tap to retry.</string>
                                     <action selector="sumbitAction:" destination="Ggj-o2-Mct" eventType="touchUpInside" id="esD-zk-Hxm"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec8-xE-Ka9">
-                                <rect key="frame" x="0.0" y="75" width="320" height="493"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6h-54-tfs">
-                                <rect key="frame" x="128" y="289.5" width="64" height="64.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="G6h-54-tfs" secondAttribute="height" multiplier="1:1" id="R34-NJ-LGI"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

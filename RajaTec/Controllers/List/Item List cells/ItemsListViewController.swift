@@ -128,9 +128,11 @@ class ItemsListViewController: UIViewController {
             
             let dateFormatter = DateFormatter()
             
-            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm a"
+            dateFormatter.dateFormat = BundleLocalization.sharedInstance().language == "en" ? "yyyy-MM-dd hh:mm a" : "a hh:mm dd-MM-yyyy"
             
-            let dateString =  "\(NSLocalizedString("Last pull to refresh", comment: "")): \(dateFormatter.string(from: lastDate))"
+            dateFormatter.locale = Locale(identifier: BundleLocalization.sharedInstance().language)
+            
+            let dateString =  "\(NSLocalizedString("Last refresh date", comment: "")): \(dateFormatter.string(from: lastDate))"
             
             refreshControl.attributedTitle = NSAttributedString(string: dateString)
             
@@ -420,9 +422,9 @@ extension ItemsListViewController : getHomeOffersConnectionDelegate {
 extension ItemsListViewController : getMobilesConnectionDelegate {
     func getMobilesConnectionSuccess() {
         
-        self.handleActivityIndicator(animate: false)
-        
         self.mobileDataSource = Mobiles.getMobiles()
+        
+        self.handleActivityIndicator(animate: false)
         
         if self.refreshControl.isRefreshing {
             
@@ -454,9 +456,9 @@ extension ItemsListViewController : getAccessoriesConnectionDelegate {
     
     func getAccessoriesSuccess() {
         
-        self.handleActivityIndicator(animate: false)
-        
         self.accessoriesDataSource = Accessories.getAccessories()
+        
+        self.handleActivityIndicator(animate: false)
         
         if self.refreshControl.isRefreshing {
             
