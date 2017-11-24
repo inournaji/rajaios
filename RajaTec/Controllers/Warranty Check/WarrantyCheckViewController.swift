@@ -57,9 +57,15 @@ class WarrantyCheckViewController: UIViewController {
         
         self.menuButton.tintColor = RajaColors.headerRedColor.getColor()
         
-        if let _ = self.warranty {
+        self.congifureActivityIndicatorView()
+        
+        if let warranty = self.warranty, let imei = warranty.imei1 {
             
-            self.handleWarrantyDetailView(withAnimation: false)
+            self.handleWarrantyDetailView(withAnimation: true)
+            
+            self.handleWarrantyRequestLoader(show: true)
+            
+            self.warrantyRequest = Connection.warrantyActivationRequest(mobileNumber: warranty.mobile ?? "", imei: imei, delegate: self)
             
         } else {
             
@@ -81,8 +87,6 @@ class WarrantyCheckViewController: UIViewController {
         if self.warranty == nil {
             
             self.warrantyTextField.becomeFirstResponder()
-            
-            self.congifureActivityIndicatorView()
             
         }
         
@@ -246,7 +250,7 @@ extension WarrantyCheckViewController: UITextFieldDelegate {
         if let enteredText = textField.text,
             textField == mobileTextField {
             
-            if !enteredText.isEmpty && !enteredText.isPhoneNumber {
+            if !enteredText.isPhoneNumber {
                 
                 self.mobileUnderLineView.backgroundColor = RajaColors.headerRedColor.getColor()
                 

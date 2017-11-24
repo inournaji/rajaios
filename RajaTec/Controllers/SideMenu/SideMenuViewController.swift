@@ -74,7 +74,7 @@ enum MenuItem {
         case .gallary:
             return NSLocalizedString("Gallary", comment: "")
         case .warranty:
-            return NSLocalizedString("Warranty", comment: "")
+            return NSLocalizedString("Activate Warranty", comment: "")
             
         case .offers:
             return NSLocalizedString("Offers", comment: "")
