@@ -63,7 +63,7 @@ class SideMenuTableViewCell: UITableViewCell {
             
             self.ConfigureLanguageCell()
         
-        case .contactUS, .gallary, .home, .joinUsonFacebook, .termsAndConditions, .warranty, .offers:
+        case .contactUS, .gallary, .home, .joinUsonFacebook, .termsAndConditions, .warranty, .offers, .branches:
             
             self.configureMenuItemCell(delegate: delegate)
             

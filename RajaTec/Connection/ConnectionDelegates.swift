@@ -42,3 +42,11 @@ protocol warrantyActivationConnectionDelegate {
     func warrantyActivationFailure(errorMessage: String)
     
 }
+
+protocol getBranchesConnectionDelegate {
+    
+    func getBranchesConnectionSuccess()
+    func getBranchesConnectionFailure()
+    
+}
+

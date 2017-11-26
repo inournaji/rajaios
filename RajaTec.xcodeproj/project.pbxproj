@@ -11,6 +11,9 @@
 		492DF4F41FB805BE00FA3A97 /* UIApplicationExtenssion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492DF4F31FB805BE00FA3A97 /* UIApplicationExtenssion.swift */; };
 		492E8DF61FAE761800AE978E /* TermsConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */; };
 		492E8DFA1FAE7F2900AE978E /* WarrantyCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */; };
+		4941E4011FC8AA4100B6C87D /* BranchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941E4001FC8AA4100B6C87D /* BranchesViewController.swift */; };
+		4941E4031FC8B8B000B6C87D /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941E4021FC8B8B000B6C87D /* Branch.swift */; };
+		4941E4051FC8B8C700B6C87D /* Branches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4941E4041FC8B8C700B6C87D /* Branches.swift */; };
 		494C72411FB3C3270095EA56 /* ContactUs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C72401FB3C27C0095EA56 /* ContactUs.swift */; };
 		494C72451FB3D7550095EA56 /* MobileAccessoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494C72471FB3D7550095EA56 /* MobileAccessoriesCollectionViewCell.xib */; };
 		494C72481FB3D7650095EA56 /* BottomBarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 494C724A1FB3D7650095EA56 /* BottomBarCollectionViewCell.xib */; };
@@ -65,6 +68,8 @@
 		49A2DFD71FA107F600DC2C2A /* SWRevealViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFCF1FA1067F00DC2C2A /* SWRevealViewController.h */; };
 		49A2DFD81FA107F600DC2C2A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFD01FA1067F00DC2C2A /* SWRevealViewController.m */; };
 		49A2DFD91FA107F600DC2C2A /* RajaTec-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 49A2DFCE1FA1067E00DC2C2A /* RajaTec-Bridging-Header.h */; };
+		49C591721FC8CA7900C54B54 /* BranchDetailPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C591701FC8CA7900C54B54 /* BranchDetailPopupViewController.swift */; };
+		49C591731FC8CA7900C54B54 /* BranchDetailPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C591711FC8CA7900C54B54 /* BranchDetailPopupViewController.xib */; };
 		49E307431FB3E047006EEB0E /* BundleLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E307401FB3E047006EEB0E /* BundleLocalization.m */; };
 		49E307441FB3E047006EEB0E /* NSBundle+Localization.m in Sources */ = {isa = PBXBuildFile; fileRef = 49E307421FB3E047006EEB0E /* NSBundle+Localization.m */; };
 		49E551041FBF3CE300E18339 /* SupportRTLLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E551031FBF3CE300E18339 /* SupportRTLLayout.swift */; };
@@ -107,6 +112,9 @@
 		492DF4F31FB805BE00FA3A97 /* UIApplicationExtenssion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtenssion.swift; sourceTree = "<group>"; };
 		492E8DF51FAE761700AE978E /* TermsConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsViewController.swift; sourceTree = "<group>"; };
 		492E8DF91FAE7F2800AE978E /* WarrantyCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarrantyCheckViewController.swift; sourceTree = "<group>"; };
+		4941E4001FC8AA4100B6C87D /* BranchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchesViewController.swift; sourceTree = "<group>"; };
+		4941E4021FC8B8B000B6C87D /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
+		4941E4041FC8B8C700B6C87D /* Branches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branches.swift; sourceTree = "<group>"; };
 		494C72401FB3C27C0095EA56 /* ContactUs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUs.swift; sourceTree = "<group>"; };
 		494C72461FB3D7550095EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MobileAccessoriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		494C72491FB3D7650095EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BottomBarCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -165,6 +173,8 @@
 		49A2DFD11FA1079F00DC2C2A /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		49A2DFD21FA1079F00DC2C2A /* ConnectionDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionDelegates.swift; sourceTree = "<group>"; };
 		49A2DFD31FA1079F00DC2C2A /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		49C591701FC8CA7900C54B54 /* BranchDetailPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchDetailPopupViewController.swift; sourceTree = "<group>"; };
+		49C591711FC8CA7900C54B54 /* BranchDetailPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BranchDetailPopupViewController.xib; sourceTree = "<group>"; };
 		49E3073F1FB3E046006EEB0E /* BundleLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleLocalization.h; sourceTree = SOURCE_ROOT; };
 		49E307401FB3E047006EEB0E /* BundleLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BundleLocalization.m; sourceTree = SOURCE_ROOT; };
 		49E307411FB3E047006EEB0E /* NSBundle+Localization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Localization.h"; sourceTree = SOURCE_ROOT; };
@@ -244,6 +254,25 @@
 			path = "Warranty Check";
 			sourceTree = "<group>";
 		};
+		4941E3FA1FC8A43800B6C87D /* Branches */ = {
+			isa = PBXGroup;
+			children = (
+				4941E4021FC8B8B000B6C87D /* Branch.swift */,
+				4941E4041FC8B8C700B6C87D /* Branches.swift */,
+			);
+			path = Branches;
+			sourceTree = "<group>";
+		};
+		4941E3FF1FC8AA3000B6C87D /* Branches */ = {
+			isa = PBXGroup;
+			children = (
+				4941E4001FC8AA4100B6C87D /* BranchesViewController.swift */,
+				49C591701FC8CA7900C54B54 /* BranchDetailPopupViewController.swift */,
+				49C591711FC8CA7900C54B54 /* BranchDetailPopupViewController.xib */,
+			);
+			path = Branches;
+			sourceTree = "<group>";
+		};
 		494C723F1FB3C1FD0095EA56 /* Contact us */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +311,7 @@
 		4964615C1FA0F8540004F1BD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4941E3FF1FC8AA3000B6C87D /* Branches */,
 				498CAB431FB7EE600052F250 /* Offers */,
 				49E811A51FB018AB00789656 /* Splash */,
 				49924B4C1FAEB7350035B774 /* Contact Us */,
@@ -458,6 +488,7 @@
 		49659B401FA0F16E00543D1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4941E3FA1FC8A43800B6C87D /* Branches */,
 				49705A681FBEE6E300D2E720 /* Warranty */,
 				498CAB3C1FB7E8F00052F250 /* OneSignal Notification */,
 				494C723F1FB3C1FD0095EA56 /* Contact us */,
@@ -731,6 +762,7 @@
 				49E551121FBFA66200E18339 /* Localizable.strings in Resources */,
 				494C724B1FB3D76C0095EA56 /* ExpandTableViewCell.xib in Resources */,
 				49E551211FBFAAFC00E18339 /* InfoPlist.strings in Resources */,
+				49C591731FC8CA7900C54B54 /* BranchDetailPopupViewController.xib in Resources */,
 				494C724E1FB3D76F0095EA56 /* SideMenuTableViewCell.xib in Resources */,
 				498CAB4A1FB7EE9D0052F250 /* OfferTableViewCell.xib in Resources */,
 				494C72541FB3D77C0095EA56 /* MobileDetailTableViewCell.xib in Resources */,
@@ -764,6 +796,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/Presentr/Presentr.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftEventBus/SwiftEventBus.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -772,6 +805,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Presentr.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftEventBus.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -872,20 +906,24 @@
 				492E8DF61FAE761800AE978E /* TermsConditionsViewController.swift in Sources */,
 				49705A6A1FBEEA9A00D2E720 /* Warranty.swift in Sources */,
 				496461981FA1006F0004F1BD /* ExpandTableViewCell.swift in Sources */,
+				4941E4031FC8B8B000B6C87D /* Branch.swift in Sources */,
 				496461781FA0FA6F0004F1BD /* Accessories.swift in Sources */,
 				498CAB401FB7EA650052F250 /* OfferNotification.swift in Sources */,
 				498CAB451FB7EE720052F250 /* OffersViewController.swift in Sources */,
 				49705A6E1FBEFBFA00D2E720 /* AlertPopup.swift in Sources */,
 				496461791FA0FA6F0004F1BD /* Accessory.swift in Sources */,
+				4941E4011FC8AA4100B6C87D /* BranchesViewController.swift in Sources */,
 				4964617A1FA0FA6F0004F1BD /* Mobile.swift in Sources */,
 				4964617B1FA0FA6F0004F1BD /* Mobiles.swift in Sources */,
 				49924B4A1FAE9E8E0035B774 /* UIImageExtension.swift in Sources */,
 				49705A701FBF1F6B00D2E720 /* WarrantyCachingModel.swift in Sources */,
 				4964617C1FA0FA6F0004F1BD /* Offer.swift in Sources */,
+				4941E4051FC8B8C700B6C87D /* Branches.swift in Sources */,
 				4964617D1FA0FA6F0004F1BD /* Offers.swift in Sources */,
 				496461771FA0FA680004F1BD /* CachingKeys.swift in Sources */,
 				4964618D1FA0FE570004F1BD /* HomeCollectionViewCell.swift in Sources */,
 				4964618F1FA0FF750004F1BD /* ItemsListViewController.swift in Sources */,
+				49C591721FC8CA7900C54B54 /* BranchDetailPopupViewController.swift in Sources */,
 				496461761FA0FA650004F1BD /* UIViewExtension.swift in Sources */,
 				496461751FA0FA620004F1BD /* RajaColours.swift in Sources */,
 				49E307441FB3E047006EEB0E /* NSBundle+Localization.m in Sources */,

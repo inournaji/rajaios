@@ -10,6 +10,7 @@ target 'RajaTec' do
     pod 'NVActivityIndicatorView'
     pod 'SwiftEventBus', :tag => '2.2.0', :git => 'https://github.com/cesarferreira/SwiftEventBus.git'
     pod 'OneSignal', '>= 2.5.2', '< 3.0'
+    pod 'Presentr'
     
     post_install do |installer|
         installer.pods_project.targets.each do |target|

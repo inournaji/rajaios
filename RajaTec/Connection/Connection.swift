@@ -241,4 +241,50 @@ class Connection {
         
     }
     
+    class func getBranches(delegate: getBranchesConnectionDelegate? = nil) {
+        
+        let getBranchesURL = APIEndPoints.getBranches.getURL()
+        
+        manager.session.configuration.timeoutIntervalForRequest = 40
+        
+        manager.request(getBranchesURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).validate().responseJSON(completionHandler: { (response) in
+            
+            switch response.result {
+                
+            case .failure:
+                
+                print("Couldn't get Branches articles")
+                
+                delegate?.getBranchesConnectionFailure()
+                
+            case .success(let anyobjectResponse):
+                
+                let parsedJson = JSON(anyobjectResponse)
+                
+                guard parsedJson.arrayValue.count > 0  else {
+                    
+                    delegate?.getBranchesConnectionFailure()
+                    
+                    return
+                    
+                }
+                
+                var branches = [Branch]()
+                
+                for branchJson in parsedJson.arrayValue {
+                    
+                    branches.append(Branch(json: branchJson))
+                    
+                }
+                
+                Branches.storeBranches(branches: branches)
+                
+                delegate?.getBranchesConnectionSuccess()
+                
+            }
+            
+        })
+        
+    }
+    
 }

@@ -15,6 +15,7 @@ enum MenuItem {
     case gallary
     case warranty
     case offers
+    case branches
     case contactUS
     case termsAndConditions
     case joinUsonFacebook
@@ -22,7 +23,7 @@ enum MenuItem {
     
     static func getMenuItems() -> [MenuItem] {
         
-        return [.close, .home, .gallary, .warranty, .offers, .contactUS, .termsAndConditions, .joinUsonFacebook, .language]
+        return [.close, .home, .gallary, .warranty, .offers, .branches, .contactUS, .termsAndConditions, .joinUsonFacebook, .language]
         
     }
     
@@ -44,6 +45,9 @@ enum MenuItem {
             
         case .offers:
             return #imageLiteral(resourceName: "offers-icon")
+            
+        case .branches:
+            return #imageLiteral(resourceName: "branch-icon")
             
         case .contactUS:
             return #imageLiteral(resourceName: "contact-us-icon")
@@ -79,6 +83,9 @@ enum MenuItem {
         case .offers:
             return NSLocalizedString("Offers", comment: "")
             
+        case .branches:
+            return NSLocalizedString("Our Branches", comment: "")
+            
         case .contactUS:
             return NSLocalizedString("Contact Us", comment: "")
             
@@ -99,7 +106,7 @@ enum MenuItem {
         
         switch self {
             
-        case .close,.home,.contactUS,.joinUsonFacebook,.language,.termsAndConditions,.offers,.warranty:
+        case .close,.home,.contactUS,.joinUsonFacebook,.language,.termsAndConditions,.offers,.warranty, .branches:
             return [ExpandItem]()
             
         case .gallary:
@@ -248,6 +255,15 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource, si
                 
             }
             
+        case .branches:
+            
+            if let revealMenu = self.revealViewController() {
+                
+                revealMenu.revealToggle(animated: true)
+                
+                revealMenu.setFront(BranchesViewController.getInstance(), animated: true)
+                
+            }
             
         case .contactUS:
             if let revealMenu = self.revealViewController() {

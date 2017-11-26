@@ -15,6 +15,7 @@ enum APIEndPoints: String {
     case getMobiles = "/mobile"
     case getMobileAccessories = "/mobile-accessories"
     case contactUs = "/node"
+    case getBranches = "/branches-api"
     case warrantyActivate = "http://backoffice.rajatec.net/api/web/v1/waranties/activate"
     
     func getURL() -> String {
@@ -38,6 +39,10 @@ enum APIEndPoints: String {
             
         case .warrantyActivate:
             return self.rawValue
+            
+        case .getBranches:
+            return APIEndPoints.rajaApi.rawValue + self.rawValue
+            
         }
         
     }
